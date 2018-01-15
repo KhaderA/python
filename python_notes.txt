@@ -61,3 +61,5 @@ Containers:
 2. tuple(Immutable: elements of a tuple are not modifiable whereas tuple can be modified) => uses ()
 3. dictionary(key/value pair) => uses {}.
    keys should be unique
+Note: Individual items of all the container can be accessed only with []
+      List and tuple's individual items are accessed with index value whereas dictionary's individual elements are accessed using key.
