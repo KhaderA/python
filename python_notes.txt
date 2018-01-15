@@ -1,0 +1,63 @@
+- Python variable do not have pre-defined type
+  Any type value can be assigned to the variable
+
+- Python Operators:
+Not available in python:
+- pointers
+- ternary operator(conditional)
+- ++ --
+available operators
++
+-
+*
+** => power of
+:  => slicing
+Changed operators
+Logical operators => ||  &&  !
+    		     or and not
+
+variable on the left gets the actual value of the variable on the right, instead of the boolean value.
+
+0 means failure
+non zero(+ve or -ve) means success 
+-------------------------
+
+
+for loop:
+- applicable only for containers(list, tuple, dictionary)
+
+eg:
+for i in lst1:
+  print lst1
+
+
+
+Program control flow constructs:
+------------------------------
+all constructs should end with colon(:)
+only way to create a code block in python is by using indentation. No specific rules on number of indentation spaces to be used.
+
+
+Object:
+======
+Everything in Python is an object.
+
+- An object has attributes and methods.
+- To print the content of an object dir(object_name)
+- To check if an item of an object is an attribute or method, type(object.item)
+- To display the usage details of a method of an object, help(object.method)
+
+- A method is a function which is bound to an object
+- A function is something not bound to any object. Freely available without any object reference.
+
+keyword - Most common and frequently used[usage: keyword <something>]
+inbuilt function - most common and les frequently used [usage: function(<something>)]
+method - specifically used[usage: object.<methodname>]
+
+
+Containers:
+===========
+1. list(Mutable) => uses [] 
+2. tuple(Immutable: elements of a tuple are not modifiable whereas tuple can be modified) => uses ()
+3. dictionary(key/value pair) => uses {}.
+   keys should be unique
