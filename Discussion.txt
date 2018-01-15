@@ -1,0 +1,269 @@
+	Python
+	---------
+
+
+
+print  =>  ???
+
+
+type of x => ?
+x=10
+type of x => ?
+x="abcdef"
+type of x => ?
+
+
+program => code + data
+
+data => variables + constants
+code => function bodies
+
+variables
+-------------
+integer     i1=10
+long         l1=123456L
+float         f1=12.34
+string       str1='abc'
+                         ''abd"
+                        '''abc'''
+                     """abc"""
+
+Operators
+---------------
+Assignment => study operators with precedence
+
+deleted
+-----------
+++   --
+
+added
+-----------
+2+3          =>    5
+'2'+'3'      =>    '23'
+'2'+3        =>   NP
+2*3          =>    6
+'2'*3        =>    '222'
+'2'*'3'      =>    NP
+2**3        =>    8
+:             =>    slicing
+
+changed
+------------
+Logical             ||    &&     !
+                         or   and   not
+
+a=3
+b=4
+c=(a or b)
+#c=(a or b)
+print c
+
+z=not 10     #verify with -10, verify with 0 also
+print z
+
+program control flow constructs
+----------------------------------------------
+if (expr1):
+	st1
+                  st2
+elif (expr2):
+	st3
+	st4
+else:
+	st5
+	st6
+st7
+
+while (expr3):
+	st8
+	st9
+
+break
+continue
+
+NA => switch , do while, goto
+Later => for
+
+Expts (hands on) to do now
+---------------------------------------
+1. User enters a number. Write a program to 
+    find whether the number entered is equal
+    to 100 or less than 100 or greater than 100
+    and print the message accordingly.
+2. Print numbers from 1 to 10
+3. Copy the code of expt 2. Do not change the
+    expr. Change the body. Print 1 to 5.
+4. Copy the code of expt 2. Do not change the
+    expr. Change the body. Print 1 to 10 except 5.
+5. User enters day of the week. If entered day is 
+    monday or tuesday or wednesday or thursday
+    or friday, print working day. If user enters 
+    saturday, print play cricket. If user enters
+    sunday, print sleep.
+6. Output, input, dyn typing
+7. Operators  
+
+
+An object
+-------------
+
+What is an object?
+
+str1="SG France"
+
+
+x=10
+x="abcdef"
+
+>>>str1="SG France")
+>>>dir(str1)
+>>>type(str1.replace)
+>>>help(str1.replace)
+>>>str1.replace("France", "India")
+>>>str1
+>>>str1=str1.replace("France", "India")
+>>>str1
+>>>str1="abc def abc"
+>>>str1.replace("abc", "ijk")
+>>>str1.replace("abc", "ijk", 1)
+
+>>>x=10
+>>>dir(x)
+>>>type(x.real)
+>>>print x.real
+>>>type(x.conjugate)
+>>>help(x.conjugate)
+
+-----------------------------------------------------------
+very common   very frequent    keyword      print 
+very common   less frequent     builtin          input
+       specific   attribute/method=>object  real/conjugate=>integer
+---------------------------------------------------------------------------------
+
+Containers
+----------------
+
+1. list
+lst1 = [10, "hi", "20"]
+
+print lst1[0]
+lst1[0]=90
+
+
+a) print the whole list - print keyword
+b) print eles of the list one by one using i) while ii) for
+c) insert 30 at the beg - insert method
+d) insert 40 at pos 1 - insert method
+e) insert 50 at the end - append method
+f) delete ele at pos 1 - del keyword
+g) delete ele at pos 1 and print the deleted item - pop method
+h) delete ele by value - remove method
+i) print number of eles of the list - len builtin
+
+for ele in lst1:
+	print ele
+
+How to use
+-----------------
+Keyword     keyword WhatEverIsToBeDone
+builtin         builtin()
+attribute     object.attribute
+method      object.method()
+
+
+2. tuple
+tup1 = (10, "hi", "20")
+
+print tup1[0]    -   P/NP?
+tup1[0]=30       -   P/NP?
+
+
+tup1=(10,20,30)
+tup1=(10,20,30,40)
+tup1="hi"
+--------------------------------------
+Methods=> count, index
+
+
+
+
+
+
+3. dictionary
+
+dct1={10:20,      30:40}
+           pair          pair
+         key value  key value
+
+print dct1
+print dct1[10]
+
+dct1[50]=70     #add a pair
+del dct1[10]     #delete a pair
+
+
+1. dct1.keys()
+2. dct1.values()
+3. dct1.has_key(50)
+
+dct1={1000:{9876324510:["Sachin", 7]}}
+print dct1
+print dct1[1000]
+print dct1[1000][9876324510]
+print dct1[1000][9876324510][0]
+print dct1[1000][9876324510][1]
+dct1[1000][9876324510].insert(1, "IT")
+print dct1
+------------------------------------------------------------------------------------------
+
+
+>>>import math
+>>>dir(math)
+>>>type(math.pi)
+>>>print math.pi
+>>>type(math.sin)
+>>>help(math.sin)
+
+
+>>>dir()
+>>>dir(__builtins__)
+
+>>>help()
+   help>keywords
+          >del
+          >modules
+          >math
+
+------------------------
+>>>help("keywords")
+>>>help("modules")
+>>>help("del")
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+Expts
+---------
+1. Print names of all a) keywords b) builtins c) modules
+2. Create a) empty list b) list with 1 ele 
+                c) an empty tuple  d) tuple with 1 ele
+                e) an empty dictionary  f) dictionary with 1 pair
+3. Work with fibonascii series
+4. Work with prime numbers
+5. Study builtins a) range b) cmp
+6. Given a number in decimal form (base 10), print the
+    value in different number systems (binary, hexa, octal)
+7. Print the value of a) pi b) sin 90 degrees
+8. Write a program to change the directory
+9. Write a program to clear the screen. Code needs to work
+    both on windows and linux
+10. Write a program to print python version
+11. Write a program to work with command line arguments
+12 a) take the back up b) test your code on linux c) with 3.x 
+
+c:\python27>python.exe   c:...\sample.py 10 20

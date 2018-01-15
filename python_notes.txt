@@ -60,6 +60,16 @@ Containers:
 1. list(Mutable) => uses [] 
 2. tuple(Immutable: elements of a tuple are not modifiable whereas tuple can be modified) => uses ()
 3. dictionary(key/value pair) => uses {}.
-   keys should be unique
+   keys should be unique & immutable
 Note: Individual items of all the container can be accessed only with []
       List and tuple's individual items are accessed with index value whereas dictionary's individual elements are accessed using key.
+      Any datatype can be set as key. But it is not a good practice to assign mutable types(such as list, dictionary) as key.
+
+
+To know about the python components:
+dict()
+ - To get the list of builtins, type dict(__builtin__) 
+help(), then type the component you need to check about
+ - To get the list of keywords, help("keywords")
+ - modules, help("modules")
+ - To get details of builtin function, object.method, module.function,module double quote is not required.
