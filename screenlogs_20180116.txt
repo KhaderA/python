@@ -1,0 +1,1306 @@
+Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:19:30) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+==================== RESTART: D:/python/day-exer/exer3.py ====================
+Enter the limit to print the fibonacci series10
+0
+1
+1
+2
+4
+7
+11
+16
+22
+29
+37
+46
+>>> 
+==================== RESTART: D:/python/day-exer/exer3.py ====================
+Enter the limit to print the fibonacci series10
+0
+1
+1
+1
+2
+4
+7
+11
+16
+22
+29
+37
+>>> 
+==================== RESTART: D:/python/day-exer/exer3.py ====================
+Enter the limit to print the fibonacci series10
+0
+1
+1
+2
+4
+7
+11
+16
+22
+29
+37
+>>> 
+==================== RESTART: D:/python/day-exer/exer3.py ====================
+Enter the limit to print the fibonacci series10
+0
+1
+1
+2
+4
+7
+11
+16
+22
+>>> 
+==================== RESTART: D:/python/day-exer/exer3.py ====================
+Enter the limit to print the fibonacci series10
+0
+1
+2
+4
+7
+11
+16
+22
+>>> 
+==================== RESTART: D:/python/day-exer/exer3.py ====================
+Enter the limit to print the fibonacci series10
+0
+1
+1
+2
+4
+7
+11
+16
+22
+>>> 
+==================== RESTART: D:/python/day-exer/exer3.py ====================
+Enter the limit to print the fibonacci series10
+0
+1
+1
+1
+2
+4
+8
+16
+32
+>>> 
+==================== RESTART: D:/python/day-exer/exer3.py ====================
+Enter the limit to print the fibonacci series10
+0
+1
+1
+2
+4
+8
+16
+32
+>>> 
+==================== RESTART: D:/python/day-exer/exer3.py ====================
+Enter the limit to print the fibonacci series10
+0
+1
+1
+2
+3
+5
+8
+13
+21
+>>> lst=[10,20,30]
+>>> lst[-1]
+30
+>>> lst
+[10, 20, 30]
+>>> lst[]
+SyntaxError: invalid syntax
+>>> lst[:]
+[10, 20, 30]
+>>> print [::2]
+SyntaxError: invalid syntax
+>>> print lst[::2]
+[10, 30]
+>>> print lst[1::2]
+[20]
+>>> import os
+>>> dir(os)
+['F_OK', 'O_APPEND', 'O_BINARY', 'O_CREAT', 'O_EXCL', 'O_NOINHERIT', 'O_RANDOM', 'O_RDONLY', 'O_RDWR', 'O_SEQUENTIAL', 'O_SHORT_LIVED', 'O_TEMPORARY', 'O_TEXT', 'O_TRUNC', 'O_WRONLY', 'P_DETACH', 'P_NOWAIT', 'P_NOWAITO', 'P_OVERLAY', 'P_WAIT', 'R_OK', 'SEEK_CUR', 'SEEK_END', 'SEEK_SET', 'TMP_MAX', 'UserDict', 'W_OK', 'X_OK', '_Environ', '__all__', '__builtins__', '__doc__', '__file__', '__name__', '__package__', '_copy_reg', '_execvpe', '_exists', '_exit', '_get_exports_list', '_make_stat_result', '_make_statvfs_result', '_pickle_stat_result', '_pickle_statvfs_result', 'abort', 'access', 'altsep', 'chdir', 'chmod', 'close', 'closerange', 'curdir', 'defpath', 'devnull', 'dup', 'dup2', 'environ', 'errno', 'error', 'execl', 'execle', 'execlp', 'execlpe', 'execv', 'execve', 'execvp', 'execvpe', 'extsep', 'fdopen', 'fstat', 'fsync', 'getcwd', 'getcwdu', 'getenv', 'getpid', 'isatty', 'kill', 'linesep', 'listdir', 'lseek', 'lstat', 'makedirs', 'mkdir', 'name', 'open', 'pardir', 'path', 'pathsep', 'pipe', 'popen', 'popen2', 'popen3', 'popen4', 'putenv', 'read', 'remove', 'removedirs', 'rename', 'renames', 'rmdir', 'sep', 'spawnl', 'spawnle', 'spawnv', 'spawnve', 'startfile', 'stat', 'stat_float_times', 'stat_result', 'statvfs_result', 'strerror', 'sys', 'system', 'tempnam', 'times', 'tmpfile', 'tmpnam', 'umask', 'unlink', 'unsetenv', 'urandom', 'utime', 'waitpid', 'walk', 'write']
+>>> os.system("clr")
+1
+>>> os.system("cls")
+0
+>>> 
+=============================== RESTART: Shell ===============================
+>>> dir(sample1.py)
+
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    dir(sample1.py)
+NameError: name 'sample1' is not defined
+>>> import sample1.py
+
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    import sample1.py
+ImportError: No module named sample1.py
+>>> 
+>>> import sys
+>>> sys.path.append("D:\\python\\day2")
+>>> import sample1
+>>> dir(sample1)
+['__builtins__', '__doc__', '__file__', '__name__', '__package__', 'a', 'fn1']
+>>> 
+>>> 
+>>> type(sample1.a)
+<type 'int'>
+>>> type(sample1.fn1)
+<type 'function'>
+>>> help(sample1.fn1)
+Help on function fn1 in module sample1:
+
+fn1()
+    This is my first python function
+
+>>> print sample1.a
+10
+>>> print sample1.fn1()
+None
+>>> dir(__package__)
+['__class__', '__delattr__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__']
+>>> dir(__file__)
+
+Traceback (most recent call last):
+  File "<pyshell#27>", line 1, in <module>
+    dir(__file__)
+NameError: name '__file__' is not defined
+>>> sample1.fn1()
+>>> print sample1.fn1()
+None
+>>> 
+=============================== RESTART: Shell ===============================
+>>> dir(sample1)
+
+Traceback (most recent call last):
+  File "<pyshell#30>", line 1, in <module>
+    dir(sample1)
+NameError: name 'sample1' is not defined
+>>> import sample1
+
+Traceback (most recent call last):
+  File "<pyshell#31>", line 1, in <module>
+    import sample1
+ImportError: No module named sample1
+>>> import sys
+>>> sys.path.append("D:\\python\\day2")
+>>> import sample1
+>>> dir(sample1)
+['__builtins__', '__doc__', '__file__', '__name__', '__package__', 'a', 'fn1']
+>>> 
+>>> sample1.fn1
+<function fn1 at 0x02A43CB0>
+>>> sample1.fn1()
+'hi'
+>>> import sys
+>>> D:\\python\\day2
+KeyboardInterrupt
+>>> 
+KeyboardInterrupt
+>>> import sample1
+>>> sample1.fn1()
+'hi'
+>>> 
+=============================== RESTART: Shell ===============================
+>>> import sys
+>>> 
+===================== RESTART: D:/python/day2/sample1.py =====================
+
+Traceback (most recent call last):
+  File "D:/python/day2/sample1.py", line 8, in <module>
+    fn1()
+TypeError: fn1() takes exactly 2 arguments (0 given)
+>>> 
+===================== RESTART: D:/python/day2/sample1.py =====================
+
+Traceback (most recent call last):
+  File "D:/python/day2/sample1.py", line 9, in <module>
+    print fn1()
+TypeError: fn1() takes exactly 2 arguments (0 given)
+>>> 
+===================== RESTART: D:/python/day2/sample1.py =====================
+
+Traceback (most recent call last):
+  File "D:/python/day2/sample1.py", line 9, in <module>
+    x=fn1()
+TypeError: fn1() takes exactly 2 arguments (0 given)
+>>> 
+===================== RESTART: D:/python/day2/sample1.py =====================
+30
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+
+Traceback (most recent call last):
+  File "D:/python/day2/menu.py", line 3, in <module>
+    import ops
+  File "D:/python/day2\ops.py", line 3
+    """Performs addition of given numbers""""
+                                            ^
+SyntaxError: EOL while scanning string literal
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+
+Traceback (most recent call last):
+  File "D:/python/day2/menu.py", line 3, in <module>
+    import ops
+  File "D:/python/day2\ops.py", line 3
+    """Performs addition of given numbers""""
+                                            ^
+SyntaxError: EOL while scanning string literal
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+
+Traceback (most recent call last):
+  File "D:/python/day2/menu.py", line 3, in <module>
+    import ops
+  File "D:/python/day2\ops.py", line 4
+    def f_add(a,b)
+                 ^
+SyntaxError: invalid syntax
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+30
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+120
+80
+2000
+5
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+0.893996663601
+>>> import math
+>>> dir(math)
+['__doc__', '__name__', '__package__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'hypot', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'trunc']
+>>> help(math.pow)
+Help on built-in function pow in module math:
+
+pow(...)
+    pow(x, y)
+    
+    Return x**y (x to the power of y).
+
+>>> math.pow(2,3)
+8.0
+>>> help(math.sqrt)
+Help on built-in function sqrt in module math:
+
+sqrt(...)
+    sqrt(x)
+    
+    Return the square root of x.
+
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+0.893996663601
+-0.448073616129
+9.0
+13.416407865
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc 2. sci calc 3. exit
+>>> dir(print)
+SyntaxError: invalid syntax
+>>> type(print)
+SyntaxError: invalid syntax
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+
+Traceback (most recent call last):
+  File "D:/python/day2/menu.py", line 39, in <module>
+    main()
+NameError: name 'main' is not defined
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice1
+Wrong Input
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice2
+Wrong Input
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice3
+Wrong Input
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice
+
+Traceback (most recent call last):
+  File "D:/python/day2/menu.py", line 39, in <module>
+    f_main()
+  File "D:/python/day2/menu.py", line 30, in f_main
+    f_main()
+  File "D:/python/day2/menu.py", line 30, in f_main
+    f_main()
+  File "D:/python/day2/menu.py", line 30, in f_main
+    f_main()
+  File "D:/python/day2/menu.py", line 21, in f_main
+    choice=input("Enter your choice")
+  File "C:\Python27\lib\idlelib\PyShell.py", line 1398, in readline
+    line = self._line_buffer or self.shell.readline()
+KeyboardInterrupt
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice1
+From Simple calculator
+Wrong Input
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice2
+From Scientific calculator
+Wrong Input
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice3
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice1
+From Simple calculator
+>>> 2
+2
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice1
+From Simple calculator
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice2
+From Scientific calculator
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice3
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice1
+1.add
+2.sub
+3.mul
+4.div
+5.goback
+Enter your choice of operation1
+Enter value of a:10
+Enter value of b:20
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice1
+1.add
+2.sub
+3.mul
+4.div
+5.goback
+Enter your choice of operation1
+Enter value of a:10
+Enter value of b:20
+The addition value is:  30
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 1
+1.add
+2.sub
+3.mul
+4.div
+5.goback
+Enter your choice of operation 2
+Enter value of a:20
+Enter value of b:10
+The subtraction value is:  10
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 1
+1.add
+2.sub
+3.mul
+4.div
+5.goback
+Enter your choice of operation 3
+Enter value of a:10
+Enter value of b:5
+The multiplication value is:  50
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 
+
+Traceback (most recent call last):
+  File "D:/python/day2/menu.py", line 70, in <module>
+    f_main()
+  File "D:/python/day2/menu.py", line 23, in f_main
+    f_simcal()
+  File "D:/python/day2/menu.py", line 65, in f_simcal
+    f_main()
+  File "D:/python/day2/menu.py", line 21, in f_main
+    choice=input("Enter your choice ")
+  File "C:\Python27\lib\idlelib\PyShell.py", line 1398, in readline
+    line = self._line_buffer or self.shell.readline()
+KeyboardInterrupt
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 1
+Enter your choice of operation 
+
+Traceback (most recent call last):
+  File "D:/python/day2/menu.py", line 71, in <module>
+    f_main()
+  File "D:/python/day2/menu.py", line 23, in f_main
+    f_simcal()
+  File "D:/python/day2/menu.py", line 34, in f_simcal
+    choice=input("Enter your choice of operation ")
+  File "C:\Python27\lib\idlelib\PyShell.py", line 1398, in readline
+    line = self._line_buffer or self.shell.readline()
+KeyboardInterrupt
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 1
+SIMPLE CALCULATOR
+1.add
+2.sub
+3.mul
+4.div
+5.goback
+Enter your choice of operation 4
+Enter value of a:100
+Enter value of b:20
+The division value is:  5
+
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 4
+Wrong Input
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 
+
+Traceback (most recent call last):
+  File "D:/python/day2/menu.py", line 72, in <module>
+    f_main()
+  File "D:/python/day2/menu.py", line 23, in f_main
+    f_simcal()
+  File "D:/python/day2/menu.py", line 67, in f_simcal
+    f_main()
+  File "D:/python/day2/menu.py", line 30, in f_main
+    f_main()
+  File "D:/python/day2/menu.py", line 21, in f_main
+    choice=input("Enter your choice ")
+  File "C:\Python27\lib\idlelib\PyShell.py", line 1398, in readline
+    line = self._line_buffer or self.shell.readline()
+KeyboardInterrupt
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 2
+Scientific Calculator
+1.sin
+2.cos
+3.power of
+4.square root
+5.go back
+Enter your choice of operation 1
+Give the input for sine operation30
+The sin value of given input is:  -0.988031624093
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 2
+Scientific Calculator
+1.sin
+2.cos
+3.power of
+4.square root
+5.go back
+Enter your choice of operation 1
+Give the input for sine operation30
+The sin value of given input is:  -0.988031624093
+Scientific Calculator
+1.sin
+2.cos
+3.power of
+4.square root
+5.go back
+Enter your choice of operation 2
+Give the input for cosine operation30
+The cos value of given input is:  0.154251449888
+Scientific Calculator
+1.sin
+2.cos
+3.power of
+4.square root
+5.go back
+Enter your choice of operation 3
+Input the number to perform power operation2
+Input the frequency of power operation4
+The power of value of given input is:  16.0
+Scientific Calculator
+1.sin
+2.cos
+3.power of
+4.square root
+5.go back
+Enter your choice of operation 4
+Input the value to perform square root operation81
+The square-root value of given input is:  9.0
+Scientific Calculator
+1.sin
+2.cos
+3.power of
+4.square root
+5.go back
+Enter your choice of operation 6
+Wrong value
+Scientific Calculator
+1.sin
+2.cos
+3.power of
+4.square root
+5.go back
+Enter your choice of operation 5
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 3
+Scientific Calculator
+1.sin
+2.cos
+3.power of
+4.square root
+5.go back
+Enter your choice of operation 
+
+Traceback (most recent call last):
+  File "D:/python/day2/menu.py", line 102, in <module>
+    f_main()
+  File "D:/python/day2/menu.py", line 25, in f_main
+    f_scical()
+  File "D:/python/day2/menu.py", line 100, in f_scical
+    f_scical()
+  File "D:/python/day2/menu.py", line 100, in f_scical
+    f_scical()
+  File "D:/python/day2/menu.py", line 100, in f_scical
+    f_scical()
+  File "D:/python/day2/menu.py", line 100, in f_scical
+    f_scical()
+  File "D:/python/day2/menu.py", line 99, in f_scical
+    f_scical()
+  File "D:/python/day2/menu.py", line 100, in f_scical
+    f_scical()
+  File "D:/python/day2/menu.py", line 77, in f_scical
+    choice=input("Enter your choice of operation ")
+  File "C:\Python27\lib\idlelib\PyShell.py", line 1398, in readline
+    line = self._line_buffer or self.shell.readline()
+KeyboardInterrupt
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 3
+>>> 
+>>> 
+>>> 
+====================== RESTART: D:/python/day2/menu.py ======================
+CALCULATOR
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 1
+SIMPLE CALCULATOR
+1.add
+2.sub
+3.mul
+4.div
+5.goback
+Enter your choice of operation 5
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 1
+SIMPLE CALCULATOR
+1.add
+2.sub
+3.mul
+4.div
+5.goback
+Enter your choice of operation 1
+Enter value of a:10
+Enter value of b:20
+The addition value is:  30
+
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 2
+Scientific Calculator
+1.sin
+2.cos
+3.power of
+4.square root
+5.go back
+Enter your choice of operation 4
+Input the value to perform square root operation49
+The square-root value of given input is:  7.0
+Scientific Calculator
+1.sin
+2.cos
+3.power of
+4.square root
+5.go back
+Enter your choice of operation 5
+1. simple calc
+2. sci calc
+3. exit
+Enter your choice 3
+>>> 
+>>> 
+>>> dir(string)
+
+Traceback (most recent call last):
+  File "<pyshell#55>", line 1, in <module>
+    dir(string)
+NameError: name 'string' is not defined
+>>> dir(String)
+
+Traceback (most recent call last):
+  File "<pyshell#56>", line 1, in <module>
+    dir(String)
+NameError: name 'String' is not defined
+>>> dir(str)
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> help(str.zfill)
+Help on method_descriptor:
+
+zfill(...)
+    S.zfill(width) -> string
+    
+    Pad a numeric string S with zeros on the left, to fill a field
+    of the specified width.  The string S is never truncated.
+
+>>> 
+================== RESTART: D:/python/day2/function_test.py ==================
+
+Traceback (most recent call last):
+  File "D:/python/day2/function_test.py", line 2, in <module>
+    print dict1
+NameError: name 'dict1' is not defined
+>>> 
+================== RESTART: D:/python/day2/function_test.py ==================
+{10: 20, 'Sachin': 99}
+{10: 50, 'Sachin': 102}
+{10: 50, 'Sachin': 102}
+>>> 
+================= RESTART: D:/python/day2/function_test3.py =================
+positional (10, 20)
+keyword {'a': 30, 'b': 40}
+positional (50, 70)
+keyword {}
+positional ()
+keyword {'a': 70, 'b': 90}
+positional ()
+keyword {}
+>>> f1=open("a.txt","r")
+>>> f1.read()
+'This is line 1\nThis is line 2\nThis is line 3'
+>>> f1.readline()
+''
+>>> help(f1.readline)
+Help on built-in function readline:
+
+readline(...)
+    readline([size]) -> next line from the file, as a string.
+    
+    Retain newline.  A non-negative size argument limits the maximum
+    number of bytes to return (an incomplete line may be returned then).
+    Return an empty string at EOF.
+
+>>> f1.readline(2)
+''
+>>> f1.readline(10)
+''
+>>> f1.readline
+<built-in method readline of file object at 0x028640D0>
+>>> f1.readline()
+''
+>>> f1.readlines()
+[]
+>>> f1.read()
+''
+>>> f1.seek
+KeyboardInterrupt
+>>> help(f1.seek)
+Help on built-in function seek:
+
+seek(...)
+    seek(offset[, whence]) -> None.  Move to new file position.
+    
+    Argument offset is a byte count.  Optional argument whence defaults to
+    0 (offset from start of file, offset should be >= 0); other values are 1
+    (move relative to current position, positive or negative), and 2 (move
+    relative to end of file, usually negative, although many platforms allow
+    seeking beyond the end of a file).  If the file is opened in text mode,
+    only offsets returned by tell() are legal.  Use of other offsets causes
+    undefined behavior.
+    Note that not all file objects are seekable.
+
+>>> f1.seek(0)
+>>> f1.readline()
+'This is line 1\n'
+>>> f1.readlines
+<built-in method readlines of file object at 0x028640D0>
+>>> f1.readlines()
+['This is line 2\n', 'This is line 3']
+>>> 
+>>> 
+>>> f1.close
+<built-in method close of file object at 0x028640D0>
+>>> f1.close()
+>>> f1.read()
+
+Traceback (most recent call last):
+  File "<pyshell#78>", line 1, in <module>
+    f1.read()
+ValueError: I/O operation on closed file
+>>> 
+>>> 
+>>> f1=open("a.txt","r")
+>>> f1.name()
+
+Traceback (most recent call last):
+  File "<pyshell#82>", line 1, in <module>
+    f1.name()
+TypeError: 'str' object is not callable
+>>> f1.name
+'a.txt'
+>>> f1.truncate
+KeyboardInterrupt
+>>> help(f1.write)
+Help on built-in function write:
+
+write(...)
+    write(str) -> None.  Write string str to file.
+    
+    Note that due to buffering, flush() or close() may be needed before
+    the file on disk reflects the data written.
+
+>>> help(f1.flush)
+Help on built-in function flush:
+
+flush(...)
+    flush() -> None.  Flush the internal I/O buffer.
+
+>>> f1.write("This is line 4")
+
+Traceback (most recent call last):
+  File "<pyshell#86>", line 1, in <module>
+    f1.write("This is line 4")
+IOError: File not open for writing
+>>> f1=open("a.txt","r")
+>>> f1.readline()
+'This is line 1\n'
+>>> f1.write("This is newly added line")
+
+Traceback (most recent call last):
+  File "<pyshell#89>", line 1, in <module>
+    f1.write("This is newly added line")
+IOError: File not open for writing
+>>> f1.close()
+>>> 
+>>> f1=open("a.txt","w")
+>>> f1.readline(0
+	    )
+
+Traceback (most recent call last):
+  File "<pyshell#94>", line 1, in <module>
+    f1.readline(0
+IOError: File not open for reading
+>>> f1.readline()
+
+Traceback (most recent call last):
+  File "<pyshell#95>", line 1, in <module>
+    f1.readline()
+IOError: File not open for reading
+>>> f1.close()
+>>> 
+>>> 
+>>> f1=open("a.txt",r+w+)
+SyntaxError: invalid syntax
+>>> help(open)
+Help on built-in function open in module __builtin__:
+
+open(...)
+    open(name[, mode[, buffering]]) -> file object
+    
+    Open a file using the file() type, returns a file object.  This is the
+    preferred way to open a file.  See file.__doc__ for further information.
+
+>>> f1=open("a.txt","r+w+")
+
+Traceback (most recent call last):
+  File "<pyshell#101>", line 1, in <module>
+    f1=open("a.txt","r+w+")
+ValueError: Invalid mode ('r+w+')
+>>> f1=open("a.txt","rw+")
+
+Traceback (most recent call last):
+  File "<pyshell#102>", line 1, in <module>
+    f1=open("a.txt","rw+")
+ValueError: Invalid mode ('rw+')
+>>> f1.close()
+>>> 
+>>> 
+
+>>> dir()
+['__builtins__', '__doc__', '__file__', '__name__', '__package__', 'f1', 'test11']
+>>> dir(__builtins__)
+['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException', 'BufferError', 'BytesWarning', 'DeprecationWarning', 'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False', 'FloatingPointError', 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError', 'ImportWarning', 'IndentationError', 'IndexError', 'KeyError', 'KeyboardInterrupt', 'LookupError', 'MemoryError', 'NameError', 'None', 'NotImplemented', 'NotImplementedError', 'OSError', 'OverflowError', 'PendingDeprecationWarning', 'ReferenceError', 'RuntimeError', 'RuntimeWarning', 'StandardError', 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError', 'SystemExit', 'TabError', 'True', 'TypeError', 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError', 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning', 'ValueError', 'Warning', 'WindowsError', 'ZeroDivisionError', '_', '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs', 'all', 'any', 'apply', 'basestring', 'bin', 'bool', 'buffer', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'cmp', 'coerce', 'compile', 'complex', 'copyright', 'credits', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'execfile', 'exit', 'file', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'intern', 'isinstance', 'issubclass', 'iter', 'len', 'license', 'list', 'locals', 'long', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'quit', 'range', 'raw_input', 'reduce', 'reload', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'unichr', 'unicode', 'vars', 'xrange', 'zip']
+>>> help("open")
+Help on built-in function open in module __builtin__:
+
+open(...)
+    open(name[, mode[, buffering]]) -> file object
+    
+    Open a file using the file() type, returns a file object.  This is the
+    preferred way to open a file.  See file.__doc__ for further information.
+
+>>> help(open)
+Help on built-in function open in module __builtin__:
+
+open(...)
+    open(name[, mode[, buffering]]) -> file object
+    
+    Open a file using the file() type, returns a file object.  This is the
+    preferred way to open a file.  See file.__doc__ for further information.
+
+>>> help(file)
+Help on class file in module __builtin__:
+
+class file(object)
+ |  file(name[, mode[, buffering]]) -> file object
+ |  
+ |  Open a file.  The mode can be 'r', 'w' or 'a' for reading (default),
+ |  writing or appending.  The file will be created if it doesn't exist
+ |  when opened for writing or appending; it will be truncated when
+ |  opened for writing.  Add a 'b' to the mode for binary files.
+ |  Add a '+' to the mode to allow simultaneous reading and writing.
+ |  If the buffering argument is given, 0 means unbuffered, 1 means line
+ |  buffered, and larger numbers specify the buffer size.  The preferred way
+ |  to open a file is with the builtin open() function.
+ |  Add a 'U' to mode to open the file for input with universal newline
+ |  support.  Any line ending in the input file will be seen as a '\n'
+ |  in Python.  Also, a file so opened gains the attribute 'newlines';
+ |  the value for this attribute is one of None (no newline read yet),
+ |  '\r', '\n', '\r\n' or a tuple containing all the newline types seen.
+ |  
+ |  'U' cannot be combined with 'w' or '+' mode.
+ |  
+ |  Methods defined here:
+ |  
+ |  __delattr__(...)
+ |      x.__delattr__('name') <==> del x.name
+ |  
+ |  __enter__(...)
+ |      __enter__() -> self.
+ |  
+ |  __exit__(...)
+ |      __exit__(*excinfo) -> None.  Closes the file.
+ |  
+ |  __getattribute__(...)
+ |      x.__getattribute__('name') <==> x.name
+ |  
+ |  __init__(...)
+ |      x.__init__(...) initializes x; see help(type(x)) for signature
+ |  
+ |  __iter__(...)
+ |      x.__iter__() <==> iter(x)
+ |  
+ |  __repr__(...)
+ |      x.__repr__() <==> repr(x)
+ |  
+ |  __setattr__(...)
+ |      x.__setattr__('name', value) <==> x.name = value
+ |  
+ |  close(...)
+ |      close() -> None or (perhaps) an integer.  Close the file.
+ |      
+ |      Sets data attribute .closed to True.  A closed file cannot be used for
+ |      further I/O operations.  close() may be called more than once without
+ |      error.  Some kinds of file objects (for example, opened by popen())
+ |      may return an exit status upon closing.
+ |  
+ |  fileno(...)
+ |      fileno() -> integer "file descriptor".
+ |      
+ |      This is needed for lower-level file interfaces, such os.read().
+ |  
+ |  flush(...)
+ |      flush() -> None.  Flush the internal I/O buffer.
+ |  
+ |  isatty(...)
+ |      isatty() -> true or false.  True if the file is connected to a tty device.
+ |  
+ |  next(...)
+ |      x.next() -> the next value, or raise StopIteration
+ |  
+ |  read(...)
+ |      read([size]) -> read at most size bytes, returned as a string.
+ |      
+ |      If the size argument is negative or omitted, read until EOF is reached.
+ |      Notice that when in non-blocking mode, less data than what was requested
+ |      may be returned, even if no size parameter was given.
+ |  
+ |  readinto(...)
+ |      readinto() -> Undocumented.  Don't use this; it may go away.
+ |  
+ |  readline(...)
+ |      readline([size]) -> next line from the file, as a string.
+ |      
+ |      Retain newline.  A non-negative size argument limits the maximum
+ |      number of bytes to return (an incomplete line may be returned then).
+ |      Return an empty string at EOF.
+ |  
+ |  readlines(...)
+ |      readlines([size]) -> list of strings, each a line from the file.
+ |      
+ |      Call readline() repeatedly and return a list of the lines so read.
+ |      The optional size argument, if given, is an approximate bound on the
+ |      total number of bytes in the lines returned.
+ |  
+ |  seek(...)
+ |      seek(offset[, whence]) -> None.  Move to new file position.
+ |      
+ |      Argument offset is a byte count.  Optional argument whence defaults to
+ |      0 (offset from start of file, offset should be >= 0); other values are 1
+ |      (move relative to current position, positive or negative), and 2 (move
+ |      relative to end of file, usually negative, although many platforms allow
+ |      seeking beyond the end of a file).  If the file is opened in text mode,
+ |      only offsets returned by tell() are legal.  Use of other offsets causes
+ |      undefined behavior.
+ |      Note that not all file objects are seekable.
+ |  
+ |  tell(...)
+ |      tell() -> current file position, an integer (may be a long integer).
+ |  
+ |  truncate(...)
+ |      truncate([size]) -> None.  Truncate the file to at most size bytes.
+ |      
+ |      Size defaults to the current file position, as returned by tell().
+ |  
+ |  write(...)
+ |      write(str) -> None.  Write string str to file.
+ |      
+ |      Note that due to buffering, flush() or close() may be needed before
+ |      the file on disk reflects the data written.
+ |  
+ |  writelines(...)
+ |      writelines(sequence_of_strings) -> None.  Write the strings to the file.
+ |      
+ |      Note that newlines are not added.  The sequence can be any iterable object
+ |      producing strings. This is equivalent to calling write() for each string.
+ |  
+ |  xreadlines(...)
+ |      xreadlines() -> returns self.
+ |      
+ |      For backward compatibility. File objects now include the performance
+ |      optimizations previously implemented in the xreadlines module.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  closed
+ |      True if the file is closed
+ |  
+ |  encoding
+ |      file encoding
+ |  
+ |  errors
+ |      Unicode error handler
+ |  
+ |  mode
+ |      file mode ('r', 'U', 'w', 'a', possibly with 'b' or '+' added)
+ |  
+ |  name
+ |      file name
+ |  
+ |  newlines
+ |      end-of-line convention used in this file
+ |  
+ |  softspace
+ |      flag indicating that a space needs to be printed; used by print
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __new__ = <built-in method __new__ of type object>
+ |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+
+>>> f1.close()
+>>> f1.open("a.txt","r+w")
+
+Traceback (most recent call last):
+  File "<pyshell#112>", line 1, in <module>
+    f1.open("a.txt","r+w")
+AttributeError: 'file' object has no attribute 'open'
+>>> f1.open("a.txt","w+")
+
+Traceback (most recent call last):
+  File "<pyshell#113>", line 1, in <module>
+    f1.open("a.txt","w+")
+AttributeError: 'file' object has no attribute 'open'
+>>> f1.open("a.txt","r+")
+
+Traceback (most recent call last):
+  File "<pyshell#114>", line 1, in <module>
+    f1.open("a.txt","r+")
+AttributeError: 'file' object has no attribute 'open'
+>>> help("modules")
+
+Please wait a moment while I gather a list of all available modules...
+
+AutoComplete        _msi                function_test2      random
+AutoCompleteWindow  _multibytecodec     function_test3      re
+AutoExpand          _multiprocessing    functools           repr
+BaseHTTPServer      _osx_support        future_builtins     rexec
+Bastion             _pyio               gc                  rfc822
+Bindings            _random             genericpath         rlcompleter
+CGIHTTPServer       _sha                getopt              robotparser
+CallTipWindow       _sha256             getpass             rpc
+CallTips            _sha512             gettext             run
+Canvas              _socket             glob                runpy
+ClassBrowser        _sqlite3            gzip                sample1
+CodeContext         _sre                hashlib             sched
+ColorDelegator      _ssl                heapq               select
+ConfigParser        _strptime           help                sets
+Cookie              _struct             hmac                setuptools
+Debugger            _subprocess         hotshot             sgmllib
+Delegator           _symtable           htmlentitydefs      sha
+Dialog              _testcapi           htmllib             shelve
+DocXMLRPCServer     _threading_local    httplib             shlex
+EditorWindow        _tkinter            idle                shutil
+FileDialog          _warnings           idle_test           signal
+FileList            _weakref            idlelib             site
+FixTk               _weakrefset         idlever             smtpd
+FormatParagraph     _winreg             ihooks              smtplib
+GrepDialog          abc                 imageop             sndhdr
+HTMLParser          aboutDialog         imaplib             socket
+HyperParser         aifc                imghdr              sqlite3
+IOBinding           antigravity         imp                 sre
+IdleHistory         anydbm              importlib           sre_compile
+MimeWriter          argparse            imputil             sre_constants
+MultiCall           array               inspect             sre_parse
+MultiStatusBar      ast                 io                  ssl
+ObjectBrowser       asynchat            itertools           stat
+OutputWindow        asyncore            json                statvfs
+ParenMatch          atexit              keybindingDialog    string
+PathBrowser         audiodev            keyword             stringold
+Percolator          audioop             lib2to3             stringprep
+PyParse             base64              linecache           strop
+PyShell             bdb                 locale              struct
+Queue               binascii            logging             subprocess
+RemoteDebugger      binhex              macosxSupport       sunau
+RemoteObjectBrowser bisect              macpath             sunaudio
+ReplaceDialog       bsddb               macurl2path         symbol
+RstripExtension     bz2                 mailbox             symtable
+ScriptBinding       cPickle             mailcap             sys
+ScrolledList        cProfile            markupbase          sysconfig
+ScrolledText        cStringIO           marshal             tabbedpages
+SearchDialog        calendar            math                tabnanny
+SearchDialogBase    cgi                 md5                 tarfile
+SearchEngine        cgitb               menu                telnetlib
+SimpleDialog        chunk               mhlib               tempfile
+SimpleHTTPServer    cmath               mimetools           test
+SimpleXMLRPCServer  cmd                 mimetypes           textView
+SocketServer        code                mimify              textwrap
+StackViewer         codecs              mmap                this
+StringIO            codeop              modulefinder        thread
+Tix                 collections         msilib              threading
+Tkconstants         colorsys            msvcrt              time
+Tkdnd               commands            multifile           timeit
+Tkinter             compileall          multiprocessing     tkColorChooser
+ToolTip             compiler            mutex               tkCommonDialog
+TreeWidget          configDialog        netrc               tkFileDialog
+UndoDelegator       configHandler       new                 tkFont
+UserDict            configHelpSourceEdit nntplib             tkMessageBox
+UserList            configSectionNameDialog nt                  tkSimpleDialog
+UserString          contextlib          ntpath              toaiff
+WidgetRedirector    cookielib           nturl2path          token
+WindowList          copy                numbers             tokenize
+ZoomHeight          copy_reg            opcode              trace
+_LWPCookieJar       csv                 operator            traceback
+_MozillaCookieJar   ctypes              ops                 ttk
+__builtin__         curses              optparse            tty
+__future__          datetime            os                  turtle
+_abcoll             dbhash              os2emxpath          types
+_ast                decimal             parser              unicodedata
+_bisect             difflib             pdb                 unittest
+_bsddb              dircache            pickle              urllib
+_codecs             dis                 pickletools         urllib2
+_codecs_cn          distutils           pip                 urlparse
+_codecs_hk          doctest             pipes               user
+_codecs_iso2022     dumbdbm             pkg_resources       uu
+_codecs_jp          dummy_thread        pkgutil             uuid
+_codecs_kr          dummy_threading     platform            warnings
+_codecs_tw          dynOptionMenuWidget plistlib            wave
+_collections        easy_install        popen2              weakref
+_csv                email               poplib              webbrowser
+_ctypes             encodings           posixfile           whichdb
+_ctypes_test        ensurepip           posixpath           winsound
+_elementtree        errno               pprint              wsgiref
+_functools          exceptions          profile             xdrlib
+_hashlib            filecmp             pstats              xml
+_heapq              fileinput           pty                 xmllib
+_hotshot            fnmatch             py_compile          xmlrpclib
+_io                 formatter           pyclbr              xxsubtype
+_json               fpformat            pydoc               zipfile
+_locale             fractions           pydoc_data          zipimport
+_lsprof             ftplib              pyexpat             zlib
+_md5                function_test       quopri              
+
+Enter any module name to get more help.  Or, type "modules spam" to search
+for modules whose descriptions contain the word "spam".
+
+>>> 
+=============================== RESTART: Shell ===============================
+>>> import xlrd
+>>> dir(xlrd)
+['Book', 'FMLA_TYPE_ARRAY', 'FMLA_TYPE_CELL', 'FMLA_TYPE_COND_FMT', 'FMLA_TYPE_DATA_VAL', 'FMLA_TYPE_NAME', 'FMLA_TYPE_SHARED', 'MMAP_AVAILABLE', 'Operand', 'Ref3D', 'USE_MMAP', 'X12Book', 'XLDateError', 'XLRDError', 'XL_CELL_BLANK', 'XL_CELL_BOOLEAN', 'XL_CELL_DATE', 'XL_CELL_EMPTY', 'XL_CELL_ERROR', 'XL_CELL_NUMBER', 'XL_CELL_TEXT', '__VERSION__', '__builtins__', '__doc__', '__file__', '__name__', '__package__', '__path__', 'biff_text_from_num', 'biffh', 'book', 'cellname', 'cellnameabs', 'colname', 'compdoc', 'count_records', 'decompile_formula', 'dump', 'dump_formula', 'empty_cell', 'error_text_from_code', 'evaluate_name_formula', 'formatting', 'formula', 'info', 'mmap', 'oBOOL', 'oERR', 'oNUM', 'oREF', 'oREL', 'oSTRG', 'oUNK', 'okind_dict', 'open_workbook', 'pprint', 'rangename3d', 'rangename3drel', 'sheet', 'sys', 'timemachine', 'xldate', 'xldate_as_datetime', 'xldate_as_tuple', 'xlsx', 'zipfile']
+>>> 
+>>> 
+>>> x=xlrd.open_workbook("sample.xls")
+
+Traceback (most recent call last):
+  File "<pyshell#120>", line 1, in <module>
+    x=xlrd.open_workbook("sample.xls")
+  File "C:\Python27\lib\site-packages\xlrd\__init__.py", line 116, in open_workbook
+    with open(filename, "rb") as f:
+IOError: [Errno 2] No such file or directory: 'sample.xls'
+>>> x=xlrd.open_workbook("sample.xlsx")
+
+Traceback (most recent call last):
+  File "<pyshell#121>", line 1, in <module>
+    x=xlrd.open_workbook("sample.xlsx")
+  File "C:\Python27\lib\site-packages\xlrd\__init__.py", line 116, in open_workbook
+    with open(filename, "rb") as f:
+IOError: [Errno 2] No such file or directory: 'sample.xlsx'
+>>> x=xlrd.open_workbook("D:\\python\\day2\\sample.xlsx")
+>>> dir(x)
+['__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_all_sheets_count', '_all_sheets_map', '_externsheet_info', '_externsheet_type_b57', '_extnsht_count', '_extnsht_name_from_num', '_repr_these', '_resources_released', '_rich_text_runlist_map', '_sh_abs_posn', '_sharedstrings', '_sheet_list', '_sheet_names', '_sheet_num_from_name', '_sheet_visibility', '_sheethdr_count', '_supbook_addins_inx', '_supbook_count', '_supbook_locals_inx', '_supbook_types', '_xf_epilogue_done', '_xf_index_to_xl_type_map', 'actualfmtcount', 'addin_func_names', 'biff2_8_load', 'biff_version', 'builtinfmtcount', 'codepage', 'colour_map', 'countries', 'datemode', 'derive_encoding', 'dump', 'encoding', 'fake_globals_get_sheet', 'filestr', 'font_list', 'format_list', 'format_map', 'formatting_info', 'get2bytes', 'get_record_parts', 'get_record_parts_conditional', 'get_sheet', 'get_sheets', 'getbof', 'handle_boundsheet', 'handle_builtinfmtcount', 'handle_codepage', 'handle_country', 'handle_datemode', 'handle_externname', 'handle_externsheet', 'handle_filepass', 'handle_name', 'handle_obj', 'handle_sheethdr', 'handle_sheetsoffset', 'handle_sst', 'handle_supbook', 'handle_writeaccess', 'initialise_format_info', 'load_time_stage_1', 'load_time_stage_2', 'logfile', 'mem', 'name_and_scope_map', 'name_map', 'name_obj_list', 'names_epilogue', 'nsheets', 'on_demand', 'palette_record', 'parse_globals', 'props', 'ragged_rows', 'raw_user_name', 'read', 'release_resources', 'sheet_by_index', 'sheet_by_name', 'sheet_loaded', 'sheet_names', 'sheets', 'style_name_map', 'unload_sheet', 'use_mmap', 'user_name', 'verbosity', 'xf_list', 'xfcount']
+>>> y=x.sheet_by_index(0)
+>>> dir(y)
+['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_cell_attr_to_xfx', '_cell_types', '_cell_values', '_cell_xf_indexes', '_dimncols', '_dimnrows', '_first_full_rowx', '_ixfe', '_maxdatacolx', '_maxdatarowx', '_position', '_repr_these', '_xf_index_stats', '_xf_index_to_xl_type_map', 'automatic_grid_line_colour', 'bf', 'biff_version', 'book', 'bt', 'cached_normal_view_mag_factor', 'cached_page_break_preview_mag_factor', 'cell', 'cell_note_map', 'cell_type', 'cell_value', 'cell_xf_index', 'col', 'col_label_ranges', 'col_slice', 'col_types', 'col_values', 'colinfo_map', 'columns_from_right_to_left', 'computed_column_width', 'cooked_normal_view_mag_factor', 'cooked_page_break_preview_mag_factor', 'default_additional_space_above', 'default_additional_space_below', 'default_row_height', 'default_row_height_mismatch', 'default_row_hidden', 'defcolwidth', 'dump', 'fake_XF_from_BIFF20_cell_attr', 'first_visible_colx', 'first_visible_rowx', 'fixed_BIFF2_xfindex', 'formatting_info', 'gcw', 'get_rows', 'gridline_colour_index', 'gridline_colour_rgb', 'handle_feat11', 'handle_hlink', 'handle_msodrawingetc', 'handle_note', 'handle_obj', 'handle_quicktip', 'handle_txo', 'has_pane_record', 'horizontal_page_breaks', 'horz_split_first_visible', 'horz_split_pos', 'hyperlink_list', 'hyperlink_map', 'insert_new_BIFF20_xf', 'logfile', 'merged_cells', 'name', 'ncols', 'nrows', 'number', 'panes_are_frozen', 'put_cell', 'put_cell_ragged', 'put_cell_unragged', 'ragged_rows', 'read', 'remove_splits_if_pane_freeze_is_removed', 'req_fmt_info', 'rich_text_runlist_map', 'row', 'row_label_ranges', 'row_len', 'row_slice', 'row_types', 'row_values', 'rowinfo_map', 'scl_mag_factor', 'sheet_selected', 'sheet_visible', 'show_formulas', 'show_grid_lines', 'show_in_page_break_preview', 'show_outline_symbols', 'show_sheet_headers', 'show_zero_values', 'split_active_pane', 'standardwidth', 'string_record_contents', 'tidy_dimensions', 'update_cooked_mag_factors', 'utter_max_cols', 'utter_max_rows', 'verbosity', 'vert_split_first_visible', 'vert_split_pos', 'vertical_page_breaks', 'visibility']
+>>> z=y.cell_value(0.0)
+
+Traceback (most recent call last):
+  File "<pyshell#126>", line 1, in <module>
+    z=y.cell_value(0.0)
+TypeError: cell_value() takes exactly 3 arguments (2 given)
+>>> z=y.cell_value(0,0)
+>>> print z
+101.0
+>>> c=x.sheet_by_index(1)
+>>> d=c.cell_value(0,0)
+
+Traceback (most recent call last):
+  File "<pyshell#130>", line 1, in <module>
+    d=c.cell_value(0,0)
+  File "C:\Python27\lib\site-packages\xlrd\sheet.py", line 415, in cell_value
+    return self._cell_values[rowx][colx]
+IndexError: list index out of range
+>>> print c.col_values()
+
+Traceback (most recent call last):
+  File "<pyshell#131>", line 1, in <module>
+    print c.col_values()
+TypeError: col_values() takes at least 2 arguments (1 given)
+>>> print c.col_values(0,0)
+[]
+>>> 

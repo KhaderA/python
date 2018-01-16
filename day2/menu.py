@@ -3,19 +3,10 @@ print "CALCULATOR"
 #add comment lines here
 
 import ops
-import sys
-
-#print ops.f_add(100,20)
-#print ops.f_sub(100,20)
-#print ops.f_mul(100,20)
-#print ops.f_div(100,20)
-
-#print ops.f_sin(90)
-#print ops.f_cos(90)
-#print ops.f_pow(3,2)
-#print ops.f_sqrt(180)
+import os
 
 def f_main():
+  #os.system("cls")
   print "1. simple calc"
   print "2. sci calc"
   print "3. exit"
@@ -33,6 +24,7 @@ def f_main():
     
 def f_simcal():
   """Implements Simple calculator"""
+  #os.system("cls")
   print "SIMPLE CALCULATOR"
   print "1.add"
   print "2.sub"
@@ -69,6 +61,7 @@ def f_simcal():
   f_main()
 
 def f_scical():
+  #os.system("cls")
   print "Scientific Calculator"
   print "1.sin"
   print "2.cos"

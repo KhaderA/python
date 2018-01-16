@@ -250,8 +250,8 @@ print dct1
 Expts
 ---------
 1. Print names of all a) keywords b) builtins c) modules
-2. Create a) empty list b) list with 1 ele 
-                c) an empty tuple  d) tuple with 1 ele
+2. Create a) empty list                  b) list with 1 ele 
+                c) an empty tuple          d) tuple with 1 ele
                 e) an empty dictionary  f) dictionary with 1 pair
 3. Work with fibonascii series
 4. Work with prime numbers
@@ -267,3 +267,735 @@ Expts
 12 a) take the back up b) test your code on linux c) with 3.x 
 
 c:\python27>python.exe   c:...\sample.py 10 20
+
+
+a.b
+x.y()
+i=j()
+
+
+
+
+
+
+
+
+
+
+
+
+
+Day 1 => Basics, Containers, Modules
+Day 2 => Functions, Files, Exceptions
+
+Negative index
+---------------------
+lst1=[10,20,30]
+
+print lst1[0],   lst1[1], lst1[2]
+print lst1[-1], lst1[-2], lst1[-3]
+
+Slicing
+----------
+lst1=[10,20,30,40,50]
+print lst1[1:4]  
+print lst1[:3]    
+print lst1[1:]       
+print lst1[:]  
+
+Generic form
+               lst1[             :                 :                ]
+                       start        end            step
+print lst1[ :  :2]
+print lst1[1: :2]
+
+Sequences
+----------------
+lst1=[10,20,(30,40)]
+print lst1;    print lst1[0];   print lst1[1]; print lst1[2]; 
+print lst1[2][0]; print lst1[2][1]
+
+tup1=(50,60,[70,80])
+tup1[2].insert(1,90)
+print tup1
+
+
+
+
+-------------------------------------------------------------
+
+sample1.py
+-----------------
+a=10
+def fn1():
+       """This is fn1 function"""
+--------------------------------------------------------------
+>>>import sample1
+>>>dir(sample1)
+>>>type(sample1.a)
+>>>print sample1.a
+>>>type(sample1.fn1)
+>>>help(sample1.fn1)
+------------------------------------------------------------------------------------------
+If module is in another folder, how do we import?
+import sys
+sys.path.append("       ")
+                               folder path where your module is present
+import sample1
+------------------------------------------------------------------------------------------
+While working on Windows
+* file extension                                   a.txt.txt
+* special characters in the path       c:\admin\temp\new
+                                                                \a         \t       \n
+                                                             c:\\admin\\temp\\new
+-------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Functions
+---------------
+def test1():
+	print "I am in test1"
+test1()
+----------------------------------------------------
+def test2():
+	return "I am in test2"
+test2()  #no o/p
+x=test2()
+print x
+#or
+print test2()
+-----------------------------------------------------
+def test3(a, b):
+	print a, b
+test3(10, 20)
+----------------------------------------------------
+x=30
+y=40
+def test4(a, b):
+	print a, b
+test4(x, y)
+----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+#move x and y a) above b) below invocation and test
+------------------------------------------------------------------------------
+
+Exercise
+--------------
+#########################################################
+#####################CALCULATOR########################
+#########################################################
+	1. simple calc  2. sci calc  3. exit
+	simple calc
+	-----------------
+	1. add	2. sub	3. mul	4. div	5. go back
+	sci calc
+	-----------------
+	1. sin	2. cos	3. power of 4. sqaure root 5. go back
+---------------------------------------------------------------------------
+* Menu driven=> ask the choice from user
+* Check for invalid chloice
+* Implement with two files=> menu.py and ops.py
+* Put doc strings
+* Clearing screen should be used to move from 
+   one menu to another
+* Use string methods like center
+* Give meaningful names for variables and functions  
+----------------------------------------------------------------------------
+
+
+
+
+
+-----------------------------------------------------------------------------
+def test5(a, b):
+	print a, b
+test5(a=30, b=40)
+test5(b=30, a=40)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+x=100
+print x
+def test6():
+	#global x
+	x=200
+	print x
+test6()
+print x
+
+-------------------------------------------------------------------------------
+#Same name in same scope => overwriting
+#Same name in different scope => LEGB
+#                               local  enclosed   global   builtin
+#-----------------------------------------------------------------------------
+
+
+
+
+if (1):
+	print "hi"
+if (0):
+	
+-----------------------------------------------------------------------------
+if (expr1):
+	st1
+else:
+	
+
+---------------------------------------------------------------------------
+def test7(a=10, b=20):
+	print a, b
+test7(30, 40)
+test7(70)
+test7()
+test7(b=90)
+
+
+
+
+-------------------------------------------------------------------------------
+def test8(a=10, b):
+	print a, b
+test8(30, 40)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#params
+#a, b                      - P
+#a, b=                    - P
+#a=, b=                 - P
+#a=, b                   - NP
+-------------------------------------------------------------------------------	
+def test9(a, b=30):
+	print a, b
+test9(10, 60)
+test9(70)
+test9()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------
+#recursion is available
+#threshold => 990 times
+#implement factorial a) using iteration b) using recursion
+def   fn1():
+	print "hi"
+	fn1()
+fn1()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+def OutsideFn():
+	print "Outside"
+	def InsideFn():
+		print "Inside"			
+	InsideFn()
+OutsideFn()
+
+
+
+
+
+
+
+
+
+
+
+
+
+x=100
+x=200
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------
+dct1={10:20, "Sachin":99}
+print dct1
+def dcttest(dct2):
+	dct2[10] = 50
+	dct2["Sachin"] += 3
+	print dct2
+dcttest(dct1)
+print dct1
+
+
+
+
+
+
+
+
+
+
+
+#write the code where in original dictionary should not be updated
+#by taking copy
+-------------------------------------------------------------------------------
+int1=10
+print int1
+def inttest(int2):
+	int2 = 20
+	print int2
+inttest(int1)
+print int1
+
+
+
+
+
+
+
+
+str1="Sachin"
+print str1[0]   - P/NP?
+str1[0]='X'      - P/NP?
+
+
+
+
+File handling
+------------------
+
+open("       ",              "   ")
+    NameOfTheFile    Mode
+
+f1=open("a.txt", "r")
+
+dummy file 
+
+a.txt
+----------------------
+This is line 1
+This is line 2
+This is line 3
+------------------------------------------------------------
+>>>f1=open("a.txt", "r")
+>>>dir(f1)
+>>>type(f1.read)
+>>>help(f1.read)
+>>>print f1.read()
+>>>f1.close()
+-------------------------------------------------------------
+
+x=20
+
+str1="Sachin"
+print str1[0]    - P/NP?
+str1[0]='X'       - P/NP?
+
+
+#write the code where org int should be updated
+#a) global  b) ret and assign back
+--------------------------------------------------------------------------------
+dct1={10:20, "Sachin":99}
+print dct1
+def dcttest(dct2):
+	dct2[10] = 50
+	dct2["Sachin"] += 3
+	print dct2
+dcttest(dct1)
+print dct1
+-------------------------------------------------------------------------------
+def test11(*pos, **kwd):
+	print "positional", pos
+	print "keyword", kwd
+test11(10,20,a=30,b=40)
+test11(50,70)
+test11(a=70,b=90)
+test11()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+File handling
+--------------------
+open("           ",     "  ")
+NameOfTheFile   Mode
+
+f1=open("a.txt", "r")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+create a dummy file a.txt
+-----------------------------------
+This is line 1
+This is line 2
+This is line 3
+-----------------------------------
+
+>>>f1=open("a.txt", "r")
+>>>dir(f1)
+>>>type(f1.read)
+>>>help(f1.read)
+>>>print f1.read()
+>>>f1.close()
+
+* Instead of hard coding the file name in program,
+   get it via command line argument
+---------------------------------------------------------------------------------------------
+Other expts (file handling)
+
+* display contents of a file (above one)=> check for error cases also
+* copy contents of a file to another file
+* print a) number of chars b) number of words c) number of lines of a file
+* write and read back a) without seek b) with seek
+---------------------------------------------------------------------------------------------
+File existing or not
+1. import os
+os.path.exists(         )
+
+2. import os
+os.path.isfile(         )
+
+3. Exception=>IOError
+
+---------------------------------------------------------------------
+Calculator exercise updatation using file handling
+---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reading contents of an xls file
+-------------------------------------------
+very common very frequent?
+very common less frequent?
+less common less frequent?
+
+help("modules")
+excel    pyexcel    xls    xlrd   ......
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1) goto net and download
+
+2)
+$pip install xlrd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c:\Python27\Scripts 
+                                       pip install xlrd
+
+
+--------------------------------------------------------------------------------------------------------
+Manually create an xls file and put some contents
+--------------------------------------------------------------------------------------------------------
+>>>import xlrd 
+#or  >>> update path variable (if module is installed in non std folder)
+>>>dir(xlrd)
+>>>x=xlrd.open_workbook("test1.xls")    #with path, if in other folder
+>>>dir(x)
+>>>y=x.sheet_by_index(0)
+>>>dir(y)
+>>>z=y.cell_value(0,0)
+>>>print z 
+------------------------------------------------------------------------------------------------------
+Python => core + 
+               available modules + 
+               downloadable modules +
+               user created modules
+------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+Exception handling
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------
+try:
+	a=10/1
+	#a=10/0
+	#raise ZeroDivisionError
+except ZeroDivisionError:
+	print "divide by zero occurred"
+else:
+	print "in else block"
+	import sys
+	sys.exit()
+finally:
+	print "in finally block"
+
+NameError     TypeError    IndexError      ValueError     ZeroDivisionError
+IOError           ImportError  Exception
+-------------------------------
+if (1):
+	print "hi"
+if (0):
+	pass	
+----------------------------------
+if (expr):
+	st1
+else:
+	pass
+----------------------------------
+
+------------------------------------------------------------------------------
+Calculator exercise=> using exception
+------------------------------------------------------------------------------
+
+-----------------------------------
+Vinod Kulkarni
++919945732510
+vinodkallagi@gmail.com
+Also on LinkedIn
+-----------------------------------
+
+
+
