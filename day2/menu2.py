@@ -36,12 +36,16 @@ def f_simcal():
   print "4.div"
   print "5.goback"
   choice=input("Enter your choice of operation: ")
+
   if(choice==1):
-    a=input("Enter value of a:")
-    b=input("Enter value of b:")
-    value=ops.f_add(a,b)
-    if(value!=None):
-      print "The addition value is: ",value
+    f1=open("input.txt","r")
+    list1=f1.readlines()
+    #a=
+    #b=
+    #value=ops.f_add(a,b)
+    #if(value!=None):
+       #print "The addition value is: ",value
+    print list1
   elif(choice==2):
     a=input("Enter value of a:")
     b=input("Enter value of b:")
