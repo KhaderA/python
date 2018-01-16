@@ -64,7 +64,7 @@ Containers:
 Note: Individual items of all the container can be accessed only with []
       List and tuple's individual items are accessed with index value whereas dictionary's individual elements are accessed using key.
       Any datatype can be set as key. But it is not a good practice to assign mutable types(such as list, dictionary) as key.
-
+      Any container can have any other container as part of its element. And while thinking of the behaviour of the container available within another, always consider the type of innermost container.
 
 To know about the python components:
 dict()
@@ -73,3 +73,62 @@ help(), then type the component you need to check about
  - To get the list of keywords, help("keywords")
  - modules, help("modules")
  - To get details of builtin function, object.method, module.function,module double quote is not required.
+
+
+
+Negative Index:
+-------------
+lst=[10,20,30]
+lst[-1] => prints 30
+lst[-2] => prints 20
+
+
+slicing: To slice a part of the value
+--------
+lst1=[10,20,30,40,50]
+print lst1[1:4] => 20,30,40 (prints from index 1 to n-1, ie 4-1=3)
+print lst1[:3]  => 10,20,30
+print lst1[1:]  => 10,20,30,40,50 (prints from index 1 to n)
+print lst1[:] => prints full list
+
+	Generic form
+		lst1[      :     :     ]
+                      start  end   step
+
+print lst1[: :2] => 10,30
+print lst1[1::2] => 20,40
+
+
+Sequences: Collection of containers excluding dictionaries. Used mostly with indexing and slicing.
+----------
+lst1=[10,20,(30,40)]
+print lst1;
+print lst1[0]
+print lst1[1]
+print lst1[2]
+Note: In the above sequence, 10 & 20 are modifiable as they are part of a list. 30 or 40 as an individual element are not modifiable
+      as they are part of a tuple. But 30 & 40 together is modifiable as they are part of the outer list.
+
+tup1=(50,60,[70,80])
+tup1[2].inseert(1,90)
+print tup1
+Note: In the above sequence tup1, 50 or 60 as a individual element is not modifiable. 70 or 80 as individual is modifiable. But 70 & 80 together not modifiable.
+
+
+Function:
+---------
+def test1():
+  <code here>
+
+calling a function,
+test1()
+
+
+- parameter is passed as object in python functions
+- mutable objects passed will hold the values updated in the clled function
+- immutable objects passed will hold its own value, not the one updated in the called function.
+
+mutable objects:
+list, dictionary
+immutable objects:
+all. Eg: int, string, float, tuple etc
