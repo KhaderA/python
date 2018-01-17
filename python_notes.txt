@@ -132,3 +132,95 @@ mutable objects:
 list, dictionary
 immutable objects:
 all. Eg: int, string, float, tuple etc
+
+
+Function overloading is not required in python because of the existence of features called dynamic-typing & positional-arguments/keywords feature.
+Constructor overloading is not available in python
+operator overloading is available in pytohon.
+
+
+
+Class:
+===========================
+- For class syntax, check the program, classtest.py
+- constructor in class is available as __init__(self)
+- destructor => __del__()
+- In Python methods with starting & ending double underscore has some standard functionality. Eg: __init__(self)
+- Every method of a python class should have atleast one parameter. And that parameter holds the object(of that class).
+  This parameter is not counted as user given parameter.And it is not required that this parameter should be names as 'self'
+
+access specifiers:
+public (no underscore)
+semi private (starting with one underscore. same as protected in java. this is not implemented in python exactly. so more or less its same as public)
+fully private (starting with two underscore)
+
+dir(__builtins__) contains standard functions and classes. To identify if a specific item is a funtion or class do help(<item>)
+- type(input)
+  o/p => <type 'builtin_function_or_method'>
+  its a function
+- type(str)
+  o/p => <type 'type'>
+  its a class
+
+Inheritance:
+class child(parent):
+  <code here>
+
+- Multi-level inheritance possible in python.(ie, A inherits B, C inherits A)
+
+
+the class 'child' is inheriting a class name 'parent'.
+- when creating an object of the derived/child class, only derived class's constructor is called. To call parent class constructer also, call the parent class constructor explicly
+  within the derived class constructor.
+
+Types of importing:
+==================
+import math ##the items under math needs to be access as math.<item>
+from math import pi ## here pi can be directly used without math.
+from math import pi,sin
+from math import *
+from math import pi as pi_1 
+ or 
+ from math import pi
+ pi_1=pi
+
+
+module Vs Package:
+------------------
+- Module appears as a file
+- Package appears as a folder/directory with collection of .py files and a mandatory __init__.py
+Both module and package work the same way
+
+
+Regular Expression: Its used for pattern matching.
+===================
+pattern matching stypes:
+1. glob/wild card/meta char
+   Used for file/folder names
+2. regular expr
+   Used for content of files
+
+'grep' uses both glob and reg-exp usage,
+grep "^hill" * (or) grep <reg-ex> <globe>
+
+
+===================
+
+Information:
+To made your code non-readable, make it as a .pyc file
+- to create a .pyc file, just do import <sample.py> on the terminal, a sample.pyc file is created. It can be used the same way a sample.py file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

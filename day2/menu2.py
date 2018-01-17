@@ -38,32 +38,61 @@ def f_simcal():
   choice=input("Enter your choice of operation: ")
 
   if(choice==1):
-    f1=open("input.txt","r")
-    list1=f1.readlines()
-    #a=
-    #b=
-    #value=ops.f_add(a,b)
-    #if(value!=None):
-       #print "The addition value is: ",value
-    print list1
+    f1=open("D:\\python\\day2\\input.txt","r")
+    a=int(f1.readline().rstrip("\n"))
+    b=int(f1.readline())
+    print "a:",a
+    print "b:",b
+    value=ops.f_add(a,b)
+    if(value!=None):
+      print "The addition value is: ",value
+    f1.close()
+    #writing output to file
+    f2=open("D:\\python\\day2\\output.txt","w")
+    f2.write(str(value))
+    f2.close()
   elif(choice==2):
-    a=input("Enter value of a:")
-    b=input("Enter value of b:")
+    f1=open("D:\\python\\day2\\input.txt","r")
+    a=int(f1.readline().rstrip("\n"))
+    b=int(f1.readline())
+    print "a:",a
+    print "b:",b
     value=ops.f_sub(a,b)
     if(value!=None):
       print "The subtraction value is: ",value
+    f1.close()
+    #writing output to file
+    f2=open("D:\\python\\day2\\output.txt","w")
+    f2.write(str(value))
+    f2.close()
   elif(choice==3):
-    a=input("Enter value of a:")
-    b=input("Enter value of b:")
+    f1=open("D:\\python\\day2\\input.txt","r")
+    a=int(f1.readline().rstrip("\n"))
+    b=int(f1.readline())
+    print "a:",a
+    print "b:",b
     value=ops.f_mul(a,b)
     if(value!=None):
       print "The multiplication value is: ",value
+    f1.close()
+    #writing output to file
+    f2=open("D:\\python\\day2\\output.txt","w")
+    f2.write(str(value))
+    f2.close()
   elif(choice==4):
-    a=input("Enter value of a:")
-    b=input("Enter value of b:")
+    f1=open("D:\\python\\day2\\input.txt","r")
+    a=int(f1.readline().rstrip("\n"))
+    b=int(f1.readline())
+    print "a:",a
+    print "b:",b
     value=ops.f_div(a,b)
     if(value!=None):
       print "The division value is: ",value
+    f1.close()
+    #writing output to file
+    f2=open("D:\\python\\day2\\output.txt","w")
+    f2.write(str(value))
+    f2.close()
   elif(choice==5):      
     f_main()
   else:

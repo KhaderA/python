@@ -940,24 +940,6 @@ Python => core +
 
 
 Exception handling
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---------------------------
 try:
 	a=10/1
@@ -988,8 +970,971 @@ else:
 
 ------------------------------------------------------------------------------
 Calculator exercise=> using exception
-------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+Day 1 => Basics, contaniners, modules
+Day 2 => Functions, files, exceptions
+Day 3 => classes, packages, regular expressions, 
+                other information
+-------------------------------------------------------------------------------------------------
+class A:
+	def __init__(self):
+		self.x=10
+		self._y=20
+		self.__z=30
+	def  fn1(self):
+		print "In fn1"
+	def  _fn2(self):
+		print "In _fn2"
+	def  __fn3(self):
+		print "In __fn3"
+m=A()                   
+print m.x
+print m._y
+print m.__z         
+m.fn1()                  
+m._fn2()
+m.__fn3()           
+--------------------------------------------------------------------------------
 
+-------------------------------------------------------------------
+* Upgrade the calculator exercise using classes
+-------------------------------------------------------------------
+
+a.b
+x.y()
+i=j()
+
+-----------------------
+>>>dir(__builtins__)
+>>>type(input)
+>>>type(str)
+-----------------------
+>>>str="abcd"
+>>>dir(str)
+#>>>del str
+>>>str(45)                  #LEGB                      
+-------------------------
+
+
+a.b
+x.y()
+i=j()
+--------------------------------
+dir(__builtins__)
+--------------------------------
+
+>>>str="abcd"
+>>>dir(str)
+#>>>del str
+>>>str(45)                               #LEGB
+
+
+
+
+
+
+
+
+
+
+
+
+
+a.b
+x.y()
+i=j()
+-------------------------
+dir(__builtins__)
+-------------------------
+>>>str="abcd"
+>>>dir(str)
+>>>del str
+>>>str(10)    #LEGB
+----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a.b
+x.y()
+i=j()
+
+------------------------
+>>>str="abcd"        - P
+>>>dir(str)               - P
+#>>>del str
+>>>str(45)                - NP      -  LEGB
+>>>x="xyz"
+
+
+
+
+
+
+
+x.y()
+i=j()
+
+------------------------------
+
+>>>str="abcd"     - P
+>>>dir(str)             - P
+>>>str(45)             - NP      -  LEGB
+------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+x.y()
+i=j()
+----------------------------------------------------------------------------
+>>>str="abcd"
+>>>dir(str)
+>>>del str
+>>>str(10)                      #LEGB
+
+
+
+
+
+
+
+
+
+
+
+
+a.b
+x.y()
+i=j()
+
+------------------------------------------
+str="abcd"   - P
+dir(str)           - P
+del str
+str(10)            - NP                   LEGB
+
+
+
+str="abcd"     - P
+dir(str)            - P
+str(10)            - NP       LEGB
+
+
+
+
+
+
+class Shape:
+	def __init__(self, x, y):
+		self.x=x
+		self.y=y
+	def area(self):
+		return self.x*self.y
+	def perimeter(self):
+		return 2*self.x+2*self.y
+myShape=Shape(10,20)
+print myShape.area()
+print myShape.perimeter()
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------
+class Square(Shape):
+	def __init__(self, x):
+		Shape.__init__(self, x, x)
+		#self.x=x
+		#self.y=x
+mySquare=Square(25)
+print mySquare.area()                   
+print mySquare.perimiter()
+-------------------------------------------------------------------------------
+class DoubleSquare(Square):
+	def __init__(self, y):
+		self.x=y
+		self.y=2*y
+	def perimeter(self):
+		return 2*self.x+3*self.y
+myDoubleSquare=DoubleSquare(45)
+print myDoubleSquare.area()
+print myDoubleSquare.perimiter()
+-------------------------------------------------------------------------------
+#Try multiple inheritance also
+Class A having i and fn1
+Class B having j and fn2
+Class C additionally having k and fn3
+Create object of class C and access i, j, k, fn1, fn2, fn3
+
+
+
+
+
+
+
+
+
+
+
+
+
+class C(A,B):
+	def __init__(self, i, j, k):
+		A.__init__(self, i)      #or self.i=...
+		B.__init__(self, j)      #or self.j=...
+		self.k=k		
+
+
+
+
+
+Multi-level
+------------------
+Shape
+   ^
+    |
+Square
+   ^
+    |
+DoubleSquare
+ 
+#try multiple inheritance also
+---------------------------------------------------
+
+#Try multiple inheritance also
+A                       B
+^                        ^
+|                          | 
+------------------------
+              |
+             C
+
+Class A having i and fn1
+Class B having j and fn2
+Class C additionally having k and fn3
+
+class C(A,B):
+	def __init__(self, i, j, k):
+		A.__init__(self, i)      #or self.i=...
+		B.__init__(self, j)      #or self.j=...
+		self.k=k		
+
+-------------------------------------------------------------------------------
+class Employee:
+	empcount=0
+	def __init__(self):
+		Employee.empcount += 1
+	def displaycount(self):
+		return Employee.empcount
+	#@staticmethod
+	#def displaycount():
+	#	return Employee.empcount
+
+emp1=Employee()
+print emp1.displaycount()         
+emp2=Employee()
+print emp2.displaycount()         
+print emp1.displaycount()         
+--------------------------------------------------------------------------------
+#add salary also and verify, 
+verify with destructor also
+--------------------------------------------------------------------------------
+class D:
+	def __init__(self, start):
+		self.data=start
+	def __sub__(self, other):
+		return D(self.data - other)
+	def displaydata(self):
+		return self.data
+X=D(7)
+Y=X-4
+Y.displaydata()
+
+
+'2'+'3' => '23'
+'2'*3   => '222'
+
+
+
+
+
+
+
+'2'+'3' =>  '23'
+'2'*3  =>  '222'
+
+dir, help  on integer also string
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------
+Types of importing
+-------------------------------
+import math
+from math import pi
+from math import pi,sin
+from math import *
+from math import pi as pi_1
+#or
+from math import pi
+pi_1=pi 
+pi_1=...
+pi_2=pi
+
+----------------------------------------------------------------------------
+
+
+>>>import os
+>>>dir(os)
+>>>type(os.sys)
+
+
+
+
+
+
+
+
+
+ 
+-------------------------------------------------------------
+>>>x=100
+>>>globals()
+{             ,'x':100             }
+>>>import os
+>>>globals()
+>>>del os
+>>>globals()
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Package
+--------------
+/home/vinod/PythonPrograms/phone
+                                                                  /isdn.py
+                                                                  /g3.py
+ 			            /pots.py
+			            /__init__.py
+                                                     /sample.py
+isdn.py
+--------------------
+def isdn():
+	print "I am isdn"
+|||ly for g3.py and pots.py
+__init__.py
+--------------------
+from isdn import isdn
+from g3 import g3
+from pots import pots
+
+sample.py
+----------------
+import phone
+
+phone.isdn()
+phone.g3()
+phone.pots()
+
+2nd way
+------------
+init
+
+import isdn
+
+sample.py
+----------------
+import phone
+phone.isdn.isdn()
+--------------- .  ----()
+              x    .    y()
+
+3rd way
+
+init balnk
+
+sample.py
+--------------
+from phone import isdn
+isdn.isdn()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import phone
+phone.isdn.isdn()
+---------------  . -----
+          x         . y     ()
+
+
+from phone import isdn
+isdn.isdn()
+
+
+
+
+--------------------------------------------------------------------------
+Python   =>   core
+                        +
+	available modules, packages
+                        +
+	downlodable modules, packages
+                        +
+	user created modules, packages
+---------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+Regular expression
+---------------------------
+$dir *.py                     $ls *.py
+
+$grep -irHn "abcd"          *
+                       reg expr     glob
+
+Styles
+----------
+1. glob / wild card / meta char
+2. reg expr
+-------------------------------------------------------------------------------
+Print names of all python files in current folder
+import os
+print os.system("ls *.py")       #dir, if windows
+
+import glob
+print glob.glob("*.py")
+-------------------------------------------------------------------------------
+print number of abc's in the below string
+str1="Abc def abc"
+
+print str1.count("abc")
+
+import re
+print re.findall("abc", str1)
+print re.findall("abc", str1, re.IGNORECASE)
+-----------------------
+>>>import re
+>>>dir(re)
+>>>help(re)
+
+
+
+Glob
+-------
+?    - a char
+*     - any char any number of times
+
+a.py    ij.py   mno.py
+
+?.py          -       a.py
+??.py        -       ij.py
+???.py      -       mno.py
+*.py           -       a.py   ij.py   mno.py
+
+
+
+
+
+
+
+
+
+Information
+-----------------
+pyc
+
+
+lst1=[10,20,30]
+lst2=lst1               #???????????
+lst3=lst1[:]
+lst4=list(lst1)
+
+print them
+
+print id(lst1), id(lst2), id(lst3), id(lst4)
+
+lst2.append(40)
+print lst2
+print lst1
+
+
+a=4
+b=2
+        6     4
+a,b=a+b,a
+print a,b
+---------------------
+
+a=(3,4)    <=> a=3,4
+
+
+tup1=(10)
+
+a,b=5,7    <=>  a,b=(5,7)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reg expr
+--------------
+Styles of pattern matching
+-------------------------------------
+1. glob / wild char / meta char
+$ls *.py
+
+2. reg expr
+$grep -irHn "abcd"       *
+                     reg expr   glob
+-------------------------------------------------------------
+1. print names of all python files in the current folder
+import os
+print os.system("dir *py")        #ls for Linux
+
+import glob
+print glob.glob(*.py")
+-------------------------------------------------------------------
+2. print number of abc's in below string
+str1="Abc def abc"
+print str1.count("abc")
+
+import re
+print re.findall("abc", str1)
+print re.findall("abc", str1, re.IGNORECASE)
+--------------------------------------------------------------------
+glob
+------
+?          a single char
+*           any char any number of times
+
+a.py    ij.py   mno.py
+
+?.py      a.py
+??.py    ij.py
+???.py  mno.py
+*.py       a.py  ij.py   mno.py
+----------------------------------------------------------------
+Reg expr
+------------
+char     meaning           pattern              strings
+------     ------------            -----------          --------------
+.         a single char          i.j            iaj ibj...izj iAj...iZj i0j..i9j  i.j
+?        0 or 1 occ               a?b         0/1 a b=>   b ab    
+          of prev reg expr
+*         0 or more occ        ab*cd      acd abcd abbcd ......
+          of prev reg expr
++        1 or more occ        ab+cd      abcd abbcd ..... 
+          of prev reg expr   
+[ ]       Range                    i[a]j          iaj
+                                         i[aA]j        iaj  iAj
+                                         i[aA]+j      iaj  iAj  iaaj  iAAj  iaAj   iAaj
+                                       i[a-z]j         iaj ibj.....izj
+		    i[a-zA-Z]j    iaj ibj.....izj  iAj iBj.....iZj
+		   i[a-zA-Z0-9]j  
+                                    i[a-z A-Z 0-9]j  
+                                    i[a-z,A-Z,0-9]j  
+[^ ]     Negated range   i[^a]j             ibj .............   
+		 i[^aA]j
+                                   i[^a-z]j
+                                   i[^a-zA-Z]j
+                                   i[^a-zA-Z0-9]j 
+                                   i[a-z^A-Z]j       iaj....izj i^j  iAj ....iZj
+{   }     min max          a{1,2}b             ab  aab
+                                   a{3,}b               
+		 a{,4}b
+		 a{7}b   
+                                   a{7,7}b
+( )       grouping         (ab)+cd            abcd  ababcd .......
+
+Anchor elements
+-----------------------
+^      at the beg
+$      at the end
+
+Misc
+-------
+\n    newline
+\s    white space
+\d    digit
+\S    non white space
+
+str1="SG SG SG SG"
+import re
+print re.findall("SG", str1)  #    "^SG"    "SG$"      "^SG$" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Information
+-----------------
+pyc
+
+
+
+
+
+
+
+-------------------------------
+lst1=[10,20,30]
+lst2=lst1                   
+lst3=lst1[:]
+lst4=list(lst1)
+
+print id(lst1), id(lst2), id(lst3), id(lst4)
+
+lst2.append(40)
+print lst2
+print lst1
+
+
+
+lst2=lst1                    
+lst3=lst1[:]
+lst4=list(lst1)
+
+print id(lst1), id(lst2), id(lst3), id(lst4)
+
+lst2.append(40)
+print lst2
+print lst1
+------------------------------
+a=4
+b=2
+         6     4
+a,b=a+b, a
+print a, b
+
+
+a=(3,4)   <=>  a=3,4
+
+tup1=(10)
+print tup1
+type(tup1)
+
+tup1=(10,)  #or 10,
+print tup1
+type(tup1)
+
+a,b=3,4   <=>   a,b=(3,4)
+
+a,b=3,4,5
+
+a=3,4,5
+a,b=3,(4,5)
+a,b=(3,4),5
+a,b,c=3,4,5
+
+a,b,c=3,4
+
+var1=10
+var2=20
+o/p=> var1 is 10 var2 is 20
+print "var1 is", var1, "var2 is", var2
+print "var1 is %d var2 is %d"%(var1, var2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------
+a=(3,4) <=> a=3,4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a=3,4
+------------------------------
+tup1=(10)
+tup1=(10,)  #or tup1=10,
+---------------------------------
+a,b=5,7
+-----------------------------------
+a=5,7
+----------------------------------
+a,b=5,6,7
+---------------------------------
+a,b,c=5,6
+----------------------------------
+a=5,6,7
+a,b,c=5,6,7
+a,b=5,(6,7)
+a,b=(5,6),7
+------------------------------------
+var1=10
+var2=20
+o/p=> var1 is 10 var2 is 20
+print "var1 is", var1, "var2 is", var2
+print "var1 is %d var2 is %d"%(var1,var2)
+--------------------------------------
+>>>items=[1,2,3]
+>>>def sqr(x):
+	return x*x
+>>>map(sqr, items)
+>>>map(lambda x:x*x, items)
+>>>filter(lambda x:x<3, items)
+>>>reduce(lambda x,y:x+y, items)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+>>>[x     for x in range(10)    if(x%2)]
+------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------
+lst1=[10,20,30]
+10 in lst1
+40 in lst1
+dct1={10:20, 30:40}
+10 in dct1
+60 in dct1
+20 in dct1
+-------------------------------------------------------------
+--------------------------------------
+>>>items=[1,2,3]
+>>>def sqr(x):
+	return x*x
+>>>map(sqr, items)
+>>>map(lambda x:x*x, items)
+>>>filter(lambda x:x<3, items)
+>>>reduce(lambda x,y:x+y, items)
+
+builtins
+-------------
+set, reload, globals
+
+modules
+-----------------
+shutil, subprocess, multiprocessing
+thread, threading, sqlite3 =>data base, GUI=> tkinter, wxpython
+urllib2 => web, smtplib => email 
+testing => doctest, unittest
+list, array, numpy, scipy, pandas, scikit, nltk
+image, profile, cProfile, selenium
+-----------------------------------------------------------------------------
+django
+---------------------------------------------------------------------------
+standard: pep8
+tools: pip, pep8checker, pylint
+-----------------------------------------------------
+extending, embedding, stand alone
+-----------------------------------------------------
+* python.org  ===> documentation
+                                --- lang ref
+	              --- lib ref
+                                --- turorial
+-------------------------------------------------------
 -----------------------------------
 Vinod Kulkarni
 +919945732510
