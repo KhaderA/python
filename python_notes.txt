@@ -19,6 +19,7 @@ float f1=12.34
 string str1='abc' or "abc" or '''abc''' or """abc"""
             It is recommended to use one single/double quote for string.Triple single/double quote is generally used for documentation.
 
+
 ==> Python Operators:
 Not available in python:
 - pointers
@@ -36,14 +37,44 @@ Logical operators => ||  &&  !
 
 - variable on the left gets the actual value of the variable on the right, instead of the boolean value.
 
+some examples:
+2+3          =>    5
+'2'+'3'      =>    '23'
+'2'+3        =>    Not possible
+2*3          =>    6
+'2'*3        =>    '222'(Multiplication with an integer works on string in python)
+'2'*'3'      =>    Not Possible
+2**3         =>    8
+:            =>   slicing
+
+
 
 ==> Failure state in Python
 0 means failure
 non zero(+ve or -ve) means success 
 
 what else means failure(false value) in python,
-"",0,0.0,0j,[],(),{},False,None
+"",'',0,0.0,0j,[],(),{},False,None
 
+
+==> Program control flow constructs:
+All constructs should end with colon(:)
+Every line falling within the construct should be indented.
+only way to create a code block in python is by using indentation. No specific rules on number of indentation spaces to be used.But same spacing for all the statements within a block is mandatory.
+
+if(expr1):
+  statement1
+elif(expr2):
+  st2
+else:
+  st3
+  
+while(expr):
+  st1
+  st2
+
+break
+continue
 
 for loop:
 - applicable only for containers(list, tuple, dictionary)
@@ -51,13 +82,9 @@ for loop:
 eg:
 for i in lst1:
   print lst1
-
-
-
-Program control flow constructs:
-------------------------------
-all constructs should end with colon(:)
-only way to create a code block in python is by using indentation. No specific rules on number of indentation spaces to be used.
+  
+Not Available in python:
+switch,case,do while, goto
 
 
 Object:
