@@ -96,11 +96,25 @@ Everything in Python is an object.
 - To check if an item of an object is an attribute or method, type(object.item)
 - To display the usage details of a method of an object, help(object.method)
 
+==> help with python keywords,modules or any topics:
+type help(), it will take you within help interface. type the word for which you need help.
+
+To search for modules related to some action, for instance to search modules related to file,
+type "modules files" in help interface.
+
+without entering help interface,
+help("keywords") => lists all the python keywords
+help("modules") =
+
+
 - A method is a function which is bound to an object
 - A function is something not bound to any object. Freely available without any object reference.
 
-keyword - Most common and frequently used[usage: keyword <something>]
-inbuilt function - most common and les frequently used [usage: function(<something>)]
+- Attribute is a variable bound to an object.
+
+-----------------------------------------------------------------------------------
+keyword - Most common and frequently used[usage: keyword <something>;Eg, print "something"]
+inbuilt function - most common and less frequently used [usage: function(<something>);Eg, open("file.txt")]
 method - specifically used[usage: object.<methodname>]
 
 
