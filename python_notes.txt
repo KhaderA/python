@@ -1,7 +1,25 @@
-- Python variable do not have pre-defined type
+==> Python variable do not have pre-defined type
   Any type value can be assigned to the variable
+  
+  Everything in python is an object
+  For Instance, a=10
+    Here a is a variable of type int. Actually a is an object of type int.
+    To check the details of the int object, do dir(int)
 
-- Python Operators:
+
+Program => code + data
+data => variables + constants
+code => function bodies
+
+
+==> Variables:
+integer i1=10
+long l1=123456L
+float f1=12.34
+string str1='abc' or "abc" or '''abc''' or """abc"""
+            It is recommended to use one single/double quote for string.Triple single/double quote is generally used for documentation.
+
+==> Python Operators:
 Not available in python:
 - pointers
 - ternary operator(conditional)
@@ -14,13 +32,17 @@ available operators
 :  => slicing
 Changed operators
 Logical operators => ||  &&  !
-    		     or and not
+    		     or and not(in python)
 
-variable on the left gets the actual value of the variable on the right, instead of the boolean value.
+- variable on the left gets the actual value of the variable on the right, instead of the boolean value.
 
+
+==> Failure state in Python
 0 means failure
 non zero(+ve or -ve) means success 
--------------------------
+
+what else means failure(false value) in python,
+"",0,0.0,0j,[],(),{},False,None
 
 
 for loop:
