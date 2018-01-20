@@ -211,6 +211,8 @@ del odd[0]
 remove() method can be used to remove the given item.
 pop() method can be used to remove an item at the given index. In addition, pop() displays the removed item.
 
+Commonly used builtin functions with list,
+all(), any(), enumerate(), len(), list(), max(), min(), sorted(), sum()
 
 Sequences: Collection of containers excluding dictionaries. Used mostly with indexing and slicing.
 ----------
