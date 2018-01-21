@@ -104,7 +104,7 @@ type "modules files" in help interface.
 
 without entering help interface,
 help("keywords") => lists all the python keywords
-help("modules") =
+help("modules") = list all modules
 
 
 - A method is a function which is bound to an object
@@ -214,6 +214,41 @@ pop() method can be used to remove an item at the given index. In addition, pop(
 Commonly used builtin functions with list,
 all(), any(), enumerate(), len(), list(), max(), min(), sorted(), sum()
 
+Tuple(elements of tuple are immutable): denoted with ()
+---------------------------------------
+tup1=(50,60,[70,80])
+tup1[2].insert(1,90)
+print tup1
+Note: In the above sequence tup1, 50 or 60 as a individual element is not modifiable. 70 or 80 as individual is modifiable. But 70 & 80 together not modifiable.
+
+
+Dictionary(Mutable): key/value pair: denoted with {}
+--------------------
+- There is no significance to position of a pair in dictionary. That is, indexing with position of the elements cannot be done as elements in dictionary are referred using keys. So inserted pairs can take any position within a dictionary.
+
+dct1={10:20, 30:40}
+     {key1:value1, key2:value2}
+
+print dct1 => prints complete dictionary
+print dct1[10] => dictionary elements can be accessed with their keys. The value of this statement is 20
+dct1[50]=70 => adding new pair to the dictionary.
+del dct1[10] => deleting a pair	 
+
+nested dictionary,
+dct1={1000:{9876324510:["Sachin", 7]}}
+print dct1                            => {1000: {9876324510L: ['Sachin', 7]}}
+print dct1[1000]                      => {9876324510L: ['Sachin', 7]}
+print dct1[1000][9876324510]          => ['Sachin', 7]
+print dct1[1000][9876324510][0]       => Sachin
+print dct1[1000][9876324510][1]       => 7
+dct1[1000][9876324510].insert(1, "IT")
+print dct1                            => {1000: {9876324510L: ['Sachin', 'IT', 7]}}
+
+some functions:
+dct1.keys()
+dct1.values()
+dct1.has_key(50)
+
 Sequences: Collection of containers excluding dictionaries. Used mostly with indexing and slicing.
 ----------
 lst1=[10,20,(30,40)]
@@ -224,11 +259,55 @@ print lst1[2]
 Note: In the above sequence, 10 & 20 are modifiable as they are part of a list. 30 or 40 as an individual element are not modifiable
       as they are part of a tuple. But 30 & 40 together is modifiable as they are part of the outer list.
 
-tup1=(50,60,[70,80])
-tup1[2].inseert(1,90)
-print tup1
-Note: In the above sequence tup1, 50 or 60 as a individual element is not modifiable. 70 or 80 as individual is modifiable. But 70 & 80 together not modifiable.
+=======================================
+>>>import math
+>>>dir(math)
+>>>type(math.pi)
+>>>print math.pi
+>>>type(math.sin)
+>>>help(math.sin)
 
+>>>dir()
+>>>dir(__builtins__)
+
+>>>help()
+   help>keywords
+          >del
+          >modules
+          >math
+
+>>>help("keywords")
+>>>help("modules")
+>>>help("del")
+=======================================
+sample1.py
+-----------------
+a=10
+def fn1():
+       """This is fn1 function"""
+--------------------------------------------------------------
+>>>import sample1
+>>>dir(sample1)
+>>>type(sample1.a)
+>>>print sample1.a
+>>>type(sample1.fn1)
+>>>help(sample1.fn1)
+------------------------------------------------------------------------------------------
+If module is in another folder, how do we import?
+import sys
+sys.path.append("       ")
+                               folder path where your module is present
+import sample1
+------------------------------------------------------------------------------------------
+While working on Windows
+* file extension                                   a.txt.txt
+* special characters in the path       c:\admin\temp\new
+                                                                \a         \t       \n
+                                                             c:\\admin\\temp\\new
+															 
+															Hence better to use \\ in windows in paths to avoid confusions due to special characters like \a,\t,\n
+
+========================================================
 
 Function:
 ---------
@@ -238,21 +317,49 @@ def test1():
 calling a function,
 test1()
 
-
 - parameter is passed as object in python functions
-- mutable objects passed will hold the values updated in the clled function
+- mutable objects passed will hold the values updated in the called function
 - immutable objects passed will hold its own value, not the one updated in the called function.
+code snippets below:
+=====
+def fn1(list1):
+  list1[0]=9
+  print("Inside function",list1)
+
+
+list1=[1,2,3,4]
+print("Before function call",list1)
+fn1(list1)
+print("After function call",list1)
+
+output(list being mutable takes the value at index position 0 as 9. And it is done in the original copy of list1):
+('Before function call', [1, 2, 3, 4])
+('Inside function', [9, 2, 3, 4])
+('After function call', [9, 2, 3, 4])
+------
+same is applicable of dictionary. 
+But for tuple, a new tuple object is created within function. original copy remains intact.
+========================
 
 mutable objects:
 list, dictionary
 immutable objects:
 all. Eg: int, string, float, tuple etc
 
-
 Function overloading is not required in python because of the existence of features called dynamic-typing & positional-arguments/keywords feature.
 Constructor overloading is not available in python
-operator overloading is available in pytohon.
+operator overloading is available in python.
 
+
+==> New ways of passing parameters to function in python in addition to usual methods.
+
+1) def test5(a, b):
+	print a, b
+   test5(a=30, b=40)
+   test5(b=30, a=40) 
+   
+   Output:
+   
 
 
 Class:
