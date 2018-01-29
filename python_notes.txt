@@ -221,6 +221,8 @@ tup1[2].insert(1,90)
 print tup1
 Note: In the above sequence tup1, 50 or 60 as a individual element is not modifiable. 70 or 80 as individual is modifiable. But 70 & 80 together not modifiable.
 
+a=(3,4) is equivalent to a=3,4 or a=3, ==> All these will create a tuple.
+
 
 Dictionary(Mutable): key/value pair: denoted with {}
 --------------------
@@ -422,6 +424,27 @@ Class:
 - Every method of a python class should have atleast one parameter. And that parameter holds the object(of that class).
   This parameter is not counted as user given parameter.And it is not required that this parameter should be names as 'self'
 
+class A:
+	def __init__(self):
+		self.x=10
+		self._y=20
+		self.__z=30
+	def  fn1(self):
+		print "In fn1"
+	def  _fn2(self):
+		print "In _fn2"
+	def  __fn3(self):
+		print "In __fn3"
+m=A()                   ##creating an object of the class A
+print m.x		##accessing the variable x with object m
+print m._y
+print m.__z         
+m.fn1()                 ##accessing the method fn1 with object m
+m._fn2()
+m.__fn3()
+
+
+
 access specifiers:
 public (no underscore)
 semi private (starting with one underscore. same as protected in java. this is not implemented in python exactly. so more or less its same as public)
@@ -483,12 +506,53 @@ Information:
 To made your code non-readable, make it as a .pyc file
 - to create a .pyc file, just do import <sample.py> on the terminal, a sample.pyc file is created. It can be used the same way a sample.py file
 
+File Handling:
+==============
+open("           ",     "  ")
+NameOfTheFile   Mode
 
+f1=open("a.txt", "r")
 
+----------------
+File existing or not
+1. import os
+os.path.exists(         )
 
+2. import os
+os.path.isfile(         )
 
+3. Exception=>IOError
+----------------
 
+--------------------------
+Exception handling
+---------------------------
+try:
+	a=10/1
+	#a=10/0
+	#raise ZeroDivisionError
+except ZeroDivisionError:
+	print "divide by zero occurred"
+else:
+	print "in else block"
+	import sys
+	sys.exit()
+finally:
+	print "in finally block"
 
+NameError     TypeError    IndexError      ValueError     ZeroDivisionError
+IOError           ImportError  Exception
+-------------------------------
+if (1):
+	print "hi"
+if (0):
+	pass	
+----------------------------------
+if (expr):
+	st1
+else:
+	pass
+----------------------------------
 
 
 
