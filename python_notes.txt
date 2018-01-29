@@ -359,9 +359,58 @@ operator overloading is available in python.
    test5(b=30, a=40) 
    
    Output:
+   30 40 => 30 is assigned to variable a of the function test5, 40 to b 
+   40 30 => 30 is assigned to b of function test5 and 40 to a
+
+2)def test7(a=10, b=20):   ## default values
+	print a, b
+  test7(30, 40)            ## forcing values to a and b of test7 function
+  test7(70)                ## 70 will be assigned to a
+  test7()                  ## default values will be printed
+  test7(b=90)              ## b will be assigned with 90, while 'a' will take default values
+  
+  Output:
+  30 40
+  70 20
+  10 20
+  10 90
+  
+  3) Nested function:
+  def OutsideFn():
+	print "Outside"
+	def InsideFn():
+		print "Inside"			
+	InsideFn()
+  OutsideFn() 
+  
+  4) Recursive Function is available in Python
+  
+  5) Using Positional and keyword in functions,
+  def test11(*pos, **kwd):
+	print "positional", pos
+	print "keyword", kwd
+  test11(10,20,a=30,b=40)
+  test11(50,70)
+  test11(a=70,b=90)
+  test11()
    
-2)
-   
+
+-----------------------------------------------------------------------------
+Scope of variables:
+-----------------------------------------------------------------------------
+x=100
+print x
+def test6():
+	#global x
+	x=200
+	print x
+test6()
+print x
+-------------------------------------------------------------------------------
+#Same name in same scope => overwriting
+#Same name in different scope => LEGB
+#                               local  enclosed   global   builtin
+#-----------------------------------------------------------------------------
 
 
 Class:
