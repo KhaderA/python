@@ -506,6 +506,16 @@ Information:
 To made your code non-readable, make it as a .pyc file
 - to create a .pyc file, just do import <sample.py> on the terminal, a sample.pyc file is created. It can be used the same way a sample.py file
 
+
+=> map
+
+=> lambda
+
+=> filter
+
+=> reduce
+
+
 File Handling:
 ==============
 open("           ",     "  ")
