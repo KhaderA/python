@@ -1,0 +1,32 @@
+- CGI scripts require a web server(apache/nginx) to run the python scripts available on server.
+- In case of apache, some mandatory configuration has to be done in the httpd.conf file
+  ScriptAlias /cgi-bin/ "/my-cgi-scripts/"  ## give the directory location where you keep your python cgi scripts
+  <Directory "/my-cgi-scripts">
+    AllowOverride None
+    Options +ExecCGI
+    Require all granted
+    SetHandler cgi-script
+  </Directory>
+- The python script should contain, the python interpreter's location in the first line
+  Then import cgi in the next line
+  Then declare the content type in the next line
+  Then follows the content of the script within <body></body>
+  
+  Eg:
+  #!/usr/bin/python
+  import cgi
+  print "Content-Type: text/html\n"
+  print "<html>"
+  print "<title>MY CGI PROGRAM</title>"
+  print "<body>Hello World</body>"
+  print "</html>"
+  
+- While calling the cgi script from browser, the link should be like
+  http://<server-name/ipaddress>/cgi-bin/<scriptname>
+  
+  
+  
+  
+  
+ Eg solution:
+ https://pythonschool.net/tag/cgi.html
