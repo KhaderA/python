@@ -88,6 +88,11 @@ for i in lst1:
   val=[ i/2 for i in list1 ]
   print val
   
+- multilist=[[0 for column in range(colval) for row in range(rowval)]
+  This above line(if given values for the variables colval & rowval) will create a 2 dimensional list with values as 0.
+  For eg: rowval=3, colval=4
+  multilist => [[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+  
   Output:
   [5,10,15]
 
