@@ -78,11 +78,19 @@ continue
 
 for loop:
 - applicable only for containers(list, tuple, dictionary)
-
 eg:
 for i in lst1:
   print lst1
+
+- And Interesting usage of for loop for iterating into a sequence like list and manipulating individual element of the list,
+  Eg:
+  list1=[10,20,30]
+  val=[ i/2 for i in list1 ]
+  print val
   
+  Output:
+  [5,10,15]
+
 Not Available in python:
 switch,case,do while, goto
 
