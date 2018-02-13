@@ -72,6 +72,13 @@ else:
 while(expr):
   st1
   st2
+  
+do while loop is not available in python. this can be implemented using the while-break combination as shown in the below example.
+while True:   ##this is a infinite loop usage
+  i=0
+  if i=5:
+   break
+  i=i+1
 
 break
 continue
