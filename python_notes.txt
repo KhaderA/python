@@ -83,8 +83,9 @@ while True:   ##this is a infinite loop usage
 
 =========
 
-break
-continue
+break - To exit out of a loop
+continue - To skip the rest part of the loop and start a new iteration of the loop(or move the execution of the loop to next iteration without executing the lines following continue keyword) 
+pass - To keep continuing the execution of the loop's iteration by ignoring any condition. Usually used as fillers or placeholders for any conditional construct's logic during code development which would be in later stages filled with appropriate code.
 
 for loop:
 - applicable only for containers(list, tuple, dictionary)
