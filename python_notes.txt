@@ -208,7 +208,7 @@ print lst1[:] => prints full list
 		lst1[      :     :     ]
                       start  end   step
 
-print lst1[: :2] => 10,30
+print lst1[: :2] => 10,30,50
 print lst1[1::2] => 20,40
 
 Changing/adding elements to a list,
